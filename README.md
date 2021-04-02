@@ -161,3 +161,4 @@ To better understand how to use **Nitrite Java**, use the following links:
 * [Nitrite: How to Create an Embedded Database for Java and Android](https://dzone.com/articles/nitrite-how-to-create-an-embedded-database-for-jav)
 * [Nitrite: An Embedded NoSQL Database for Java and Android](https://medium.com/@anidotnet/nitrite-an-embedded-nosql-database-for-java-and-android-318bf48c7758)
 
+"# This is the Software Engineering Fundamentals project of Iozsa Andrei and Hanes Andreea" 

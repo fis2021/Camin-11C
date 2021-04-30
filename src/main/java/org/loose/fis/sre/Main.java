@@ -18,9 +18,12 @@ public class Main extends Application {
         initDirectory();
         UserService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
-        primaryStage.setTitle("Registration Example");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Scene scene=new Scene(root);
+        primaryStage.setScene(scene);
         primaryStage.show();
+        //primaryStage.setTitle("Registration Example");
+        //primaryStage.setScene(new Scene(root, 300, 275));
+        //primaryStage.show();
     }
 
     private void initDirectory() {

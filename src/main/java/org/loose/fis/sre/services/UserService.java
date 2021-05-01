@@ -10,7 +10,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
 
-import org.loose.fis.sre.services.*;
+import org.loose.fis.sre.services.FileSystemService;
 
 public class UserService {
 

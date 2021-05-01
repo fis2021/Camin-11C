@@ -49,7 +49,7 @@ public class RegistrationController {
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            System.out.println(e.getCause());
+            e.printStackTrace();
         }
     }
 }

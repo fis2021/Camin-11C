@@ -52,7 +52,6 @@
 
     <ChoiceBox fx:id="role" prefHeight="26.0" prefWidth="487.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
     </ChoiceBox>
-    <Button text="Login" onAction="#handleLoginAction" fx:id="loginButton" GridPane.columnIndex="1" GridPane.rowIndex="8" />
     <Text fx:id="registrationMessage" fill="#1e1f1d" GridPane.columnIndex="3" GridPane.rowIndex="8" />
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="6">
         <Button contentDisplay="CENTER" onAction="#handleRegisterAction" prefHeight="26.0" prefWidth="463.0" stylesheets="@Design_register.css" text="Register" textFill="#831387">
@@ -63,7 +62,8 @@
             <Font name="Cambria Bold" size="16.0" />
          </font></Button>
     </HBox>
-   <ImageView cache="true" fitHeight="139.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+    <Button text="Login" onAction="#handleLoginAction" fx:id="loginButton" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <ImageView cache="true" fitHeight="139.0" fitWidth="244.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
       <image>
          <Image url="@poli.jpg" />
       </image>

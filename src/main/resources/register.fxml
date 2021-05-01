@@ -17,7 +17,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.Cursor?>
-<GridPane alignment="center" hgap="10" prefHeight="600" prefWidth="800" vgap="10"
+<GridPane alignment="center" hgap="10" prefHeight="400" prefWidth="600" vgap="10"
+          stylesheets="@Design_register.css"
           xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1"
           fx:controller="org.loose.fis.sre.controllers.RegistrationController">
 <?import javafx.geometry.*?>

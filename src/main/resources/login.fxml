@@ -6,15 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LoginController">
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LoginController">
    <children>
-      <TextField layoutX="151.0" layoutY="40.0" />
+      <TextField fx:id="usernameField" layoutX="151.0" layoutY="40.0" />
       <Text layoutX="74.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
-      <TextField layoutX="151.0" layoutY="87.0" />
+      <PasswordField fx:id="passwordField" layoutX="151.0" layoutY="87.0" />
       <Text layoutX="74.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
       <ChoiceBox fx:id="role" layoutX="150.0" layoutY="137.0" prefHeight="26.0" prefWidth="152.0">
       </ChoiceBox>
-      <Button layoutX="173.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleLoginAction" text="Login" />
+      <Button layoutX="173.0" layoutY="200.0" mnemonicParsing="false" fx:id="loginButton" onAction="#handleLoginAction" text="Login" />
       <Text layoutX="82.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
    </children>
 </AnchorPane>

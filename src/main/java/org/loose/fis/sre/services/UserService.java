@@ -28,17 +28,18 @@ public class UserService {
         userRepository.insert(new User(username, encodePassword(username, password), role));
     }
 
-    public static boolean checkUserDoesNotAlreadyExist(String username,String password) throws IncorrectLoginException {
-        for (User user : userRepository.find()) {
-            if (Objects.equals(username, user.getUsername()))
-                if(!Objects.equals(user.getPassword(), encodePassword(username,password)))
-                    throw new IncorrectLoginException(password);
-                else return true;
+    public static boolean checkForAccount(String username, String password) {
+        for (User user : UserService.getUserRepository().find()) {
+            System.out.println(encodePassword(username,password));
+            System.out.println(user.getPassword());
+            if (Objects.equals(user.getUsername(), username)) {
+                return true;
+            }
         }
         return false;
     }
 
-    private static String encodePassword(String salt, String password) {
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
         byte[] hashedPassword = md.digest(password.getBytes(StandardCharsets.UTF_8));

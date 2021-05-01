@@ -1,7 +1,11 @@
 package org.loose.fis.sre.exceptions;
 
 public class IncorrectLoginException extends Exception{
-    public IncorrectLoginException(){
-        super("Incorrect Login");
+    private String password;
+
+    public IncorrectLoginException(String password){
+        super("Username already taken or incorrect password");
+        this.password = password;
     }
+
 }

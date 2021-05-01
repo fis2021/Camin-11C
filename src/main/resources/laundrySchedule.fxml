@@ -8,6 +8,6 @@
             xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="org.loose.fis.sre.controllers.LaundryScheduleController">
     <children>
-        <Button onAction="#handleRoomProfileAction" fx:id="roomProfileButton" layoutX="109.0" layoutY="58.0" mnemonicParsing="false" text="Room Profile" />
+
     </children>
 </AnchorPane>

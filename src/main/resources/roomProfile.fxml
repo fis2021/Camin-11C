@@ -5,9 +5,9 @@
 
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.RoomProfileController">
-<!--   <children>-->
-<!--      <DialogPane headerText="Numeber of the room:" layoutX="14.0" layoutY="14.0" />-->
-<!--      <DialogPane headerText="Floor:" layoutX="14.0" layoutY="74.0" />-->
-<!--      <DialogPane headerText="Your roommate is:" layoutX="14.0" layoutY="138.0" />-->
-<!--   </children>-->
+   <children>
+      <DialogPane headerText="Numeber of the room:" layoutX="14.0" layoutY="14.0" />
+      <DialogPane headerText="Floor:" layoutX="14.0" layoutY="74.0" />
+      <DialogPane headerText="Your roommate is:" layoutX="14.0" layoutY="138.0" />
+   </children>
 </AnchorPane>

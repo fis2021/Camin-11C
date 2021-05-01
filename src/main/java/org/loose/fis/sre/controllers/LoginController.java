@@ -10,18 +10,14 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import org.dizitart.no2.objects.ObjectRepository;
-import org.loose.fis.sre.exceptions.IncorrectLoginException;
-import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.services.UserService;
 
 import java.io.IOException;
 
 public class LoginController {
-    private final ObjectRepository<User> userRepository = UserService.getUserRepository();
 
     @FXML
-    private Text loginMessage;
+    private Text registrationMessage;
     @FXML
     private PasswordField passwordField;
     @FXML
@@ -39,16 +35,13 @@ public class LoginController {
     @FXML
     public void handleLoginAction(){
         try {
-            Stage stage = new Stage();
-            if(!UserService.checkUserDoesNotAlreadyExist(usernameField.getText(),passwordField.getText())) {
-                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("studentPage.fxml"));
-                Parent root = loader.load();
-                stage.setScene(new Scene(root));
-                stage.show();
-                StudentPageController.setClientUsername(usernameField.getText());
-            }
-        } catch (IncorrectLoginException | IOException e) {
-            loginMessage.setText(e.getMessage());
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("profilePage.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) loginButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println(e.getCause());
         }
     }
 }

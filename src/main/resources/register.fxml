@@ -51,7 +51,7 @@
 
     <ChoiceBox fx:id="role" prefHeight="26.0" prefWidth="487.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
     </ChoiceBox>
-<!--    <Button text="Login" onAction="#handleLoginAction" fx:id="loginButton" GridPane.columnIndex="1" GridPane.rowIndex="8" />-->
+    <Button text="Login" onAction="#handleLoginAction" fx:id="loginButton" GridPane.columnIndex="1" GridPane.rowIndex="8" />
     <Text fx:id="registrationMessage" fill="#1e1f1d" GridPane.columnIndex="3" GridPane.rowIndex="8" />
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="6">
         <Button contentDisplay="CENTER" onAction="#handleRegisterAction" prefHeight="26.0" prefWidth="463.0" stylesheets="@Design_register.css" text="Register" textFill="#831387">

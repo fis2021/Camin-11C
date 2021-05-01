@@ -20,6 +20,9 @@ public class Main extends Application {
         primaryStage.setTitle("Registration Example");
         primaryStage.setScene(new Scene(root, 400, 475));
         primaryStage.show();
+        //primaryStage.setTitle("Registration Example");
+        //primaryStage.setScene(new Scene(root, 300, 275));
+        //primaryStage.show();
     }
 
     private void initDirectory() {

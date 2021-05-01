@@ -24,16 +24,18 @@ public class UserService {
         userRepository = database.getRepository(User.class);
     }
 
-    public static void addUser(String username, String password, String role) throws UsernameAlreadyExistsException {
-        checkUserDoesNotAlreadyExist(username);
+    public static void addUser(String username, String password, String role){
         userRepository.insert(new User(username, encodePassword(username, password), role));
     }
 
-    private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
+    public static boolean checkUserDoesNotAlreadyExist(String username,String password) throws IncorrectLoginException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
-                throw new UsernameAlreadyExistsException(username);
+                if(!Objects.equals(user.getPassword(), encodePassword(username,password)))
+                    throw new IncorrectLoginException(password);
+                else return true;
         }
+        return false;
     }
 
     private static String encodePassword(String salt, String password) {

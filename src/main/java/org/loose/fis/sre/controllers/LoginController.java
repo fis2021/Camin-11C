@@ -40,12 +40,21 @@ public class LoginController {
         try {
 
             if (UserService.checkForAccount(usernameField.getText(),passwordField.getText()) == true) {
-                System.out.println("Account Exists");
-                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("studentPage.fxml"));
-                Parent root = loader.load();
-                Stage stage = (Stage) loginButton.getScene().getWindow();
-                stage.setScene(new Scene(root));
-                stage.show();
+                if(role.getValue() == "Student") {
+                    System.out.println("Student");
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("studentPage.fxml"));
+                    Parent root = loader.load();
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                } else {
+                    System.out.println("Admin");
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("adminPage.fxml"));
+                    Parent root = loader.load();
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                }
             } else {
                 throw new IncorrectLoginException("Account does not exist");
             }

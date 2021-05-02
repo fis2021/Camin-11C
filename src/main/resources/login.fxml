@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LoginController">
+   <children>
+      <TextField fx:id="usernameField" layoutX="151.0" layoutY="40.0" />
+      <Text layoutX="74.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <PasswordField fx:id="passwordField" layoutX="151.0" layoutY="87.0" />
+      <Text layoutX="74.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <ChoiceBox fx:id="role" layoutX="150.0" layoutY="137.0" prefHeight="26.0" prefWidth="152.0">
+      </ChoiceBox>
+      <Button layoutX="173.0" layoutY="200.0" mnemonicParsing="false" fx:id="loginButton" onAction="#handleLoginAction" text="Login" />
+      <Text layoutX="82.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
+   </children>
+</AnchorPane>

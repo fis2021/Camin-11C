@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.loose.fis.sre.exceptions.*;
 import org.loose.fis.sre.model.User;
+import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.*;
 
 import java.io.IOException;
@@ -43,11 +44,7 @@ public class RegistrationController {
     @FXML
     public void handleLoginAction(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("login.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) loginButton.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+            window.createWindow("login.fxml",loginButton);
         } catch (IOException e) {
             e.printStackTrace();
         }

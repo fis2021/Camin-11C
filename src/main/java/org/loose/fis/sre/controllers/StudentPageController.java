@@ -15,12 +15,26 @@ public class StudentPageController {
     private Button roomProfileButton;
     @FXML
     private Button laundryScheduleButton;
+    @FXML
+    private Button checkPaymentsButton;
+    @FXML
+    private Button laundryAppointmentButton; //facem form?
 
     public void handleRoomProfileAction() throws IOException {
         window.createWindow("roomProfile.fxml",roomProfileButton);
     }
 
     public void handleLaundryScheduleAction() throws IOException {
-        window.createWindow("roomProfile.fxml",roomProfileButton);
+        window.createWindow("roomProfile.fxml",laundryScheduleButton);
     }
+
+    public void handleCheckPaymentsAction()  throws IOException
+    {
+        window.createWindow("paymentsSituation.fxml",checkPaymentsButton);
+    }
+
+
+
+
+
 }

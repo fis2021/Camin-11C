@@ -30,8 +30,7 @@ public class UserService {
 
     public static boolean checkForAccount(String username, String password) {
         for (User user : UserService.getUserRepository().find()) {
-            System.out.println(encodePassword(username,password));
-            System.out.println(user.getPassword());
+
             if (Objects.equals(user.getUsername(), username)) {
                 return true;
             }

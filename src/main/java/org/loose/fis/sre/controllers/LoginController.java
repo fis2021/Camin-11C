@@ -12,6 +12,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.loose.fis.sre.exceptions.IncorrectLoginException;
 import org.loose.fis.sre.model.User;
+import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.UserService;
 
 import java.io.IOException;
@@ -41,19 +42,9 @@ public class LoginController {
 
             if (UserService.checkForAccount(usernameField.getText(),passwordField.getText()) == true) {
                 if(role.getValue() == "Student") {
-                    System.out.println("Student");
-                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("studentPage.fxml"));
-                    Parent root = loader.load();
-                    Stage stage = (Stage) loginButton.getScene().getWindow();
-                    stage.setScene(new Scene(root));
-                    stage.show();
+                    window.createWindow("studentPage.fxml",loginButton);
                 } else {
-                    System.out.println("Admin");
-                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("adminPage.fxml"));
-                    Parent root = loader.load();
-                    Stage stage = (Stage) loginButton.getScene().getWindow();
-                    stage.setScene(new Scene(root));
-                    stage.show();
+                    window.createWindow("adminPage.fxml",loginButton);
                 }
             } else {
                 throw new IncorrectLoginException("Account does not exist");
@@ -61,7 +52,7 @@ public class LoginController {
         } catch (IncorrectLoginException e) {
             System.out.println(e);
         } catch (IOException ee) {
-            System.out.println("ooops");
+            System.out.println(ee.getCause());
         }
     }
 }

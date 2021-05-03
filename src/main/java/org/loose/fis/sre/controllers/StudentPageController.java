@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.window;
 
 import java.io.IOException;
 
@@ -16,18 +17,10 @@ public class StudentPageController {
     private Button laundryScheduleButton;
 
     public void handleRoomProfileAction() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("roomProfile.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) roomProfileButton.getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+        window.createWindow("roomProfile.fxml",roomProfileButton);
     }
 
     public void handleLaundryScheduleAction() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("laundrySchedule.fxml"));
-        Parent root = loader.load();
-        Stage stage = (Stage) laundryScheduleButton.getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.show();
+        window.createWindow("roomProfile.fxml",roomProfileButton);
     }
 }

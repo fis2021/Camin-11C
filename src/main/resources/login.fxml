@@ -39,6 +39,12 @@
             <Image url="@poli_cladire.jpg" />
          </image>
       </ImageView>
+      <Button fx:id="backToRegisterButton" layoutX="418.0" layoutY="14.0" mnemonicParsing="false"
+              opacity="0.78" prefHeight="27.0" prefWidth="159.0"
+              onAction="#handleBackToRegisterAction" text="Back to Register Page" textFill="#a315df">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
+         </font></Button>
 
    </children>
 </AnchorPane>

@@ -5,8 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.Announcement;
 import org.loose.fis.sre.model.window;
+import org.loose.fis.sre.services.AnnouncementService;
 
 import java.io.IOException;
 
@@ -25,24 +28,24 @@ public class StudentPageController {
     private Button LogoutButton;
 
     public void handleRoomProfileAction() throws IOException {
-        window.createWindow("roomProfile.fxml",roomProfileButton);
+        window.createWindow("roomProfile.fxml", roomProfileButton);
     }
 
     public void handleLaundryScheduleAction() throws IOException {
-        window.createWindow("roomProfile.fxml",laundryScheduleButton);
+        window.createWindow("roomProfile.fxml", laundryScheduleButton);
     }
 
-    public void handleCheckPaymentsAction()  throws IOException
-    {
-        window.createWindow("paymentsSituation.fxml",checkPaymentsButton);
+    public void handleCheckPaymentsAction() throws IOException {
+        window.createWindow("paymentsSituation.fxml", checkPaymentsButton);
     }
-    public void handleStudentAnnouncementsAction()  throws IOException
-    {
-        window.createWindow("studentAnnouncements.fxml",studentAnnouncementsButton);
+
+    public void handleStudentAnnouncementsAction() throws IOException {
+        window.createWindow("studentAnnouncements.fxml", studentAnnouncementsButton);
     }
+
     public void handleLogout() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+        try {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
             Stage stage = (Stage) (LogoutButton.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
@@ -50,10 +53,6 @@ public class StudentPageController {
             System.out.println("Error");
         }
     }
-
-
-
-
 
 
 }

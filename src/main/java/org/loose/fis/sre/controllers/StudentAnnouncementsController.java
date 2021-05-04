@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-public class PaymentsSituationController {
+public class StudentAnnouncementsController {
 
     @FXML
     private Button backToStudentHomePageButton;

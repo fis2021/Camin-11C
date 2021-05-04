@@ -28,5 +28,15 @@
             <Image url="@poli_cladire.jpg" />
          </image>
       </ImageView>
+      <Button fx:id="studentAnnouncementsButton" layoutX="14.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleStudentAnnouncementsAction" prefHeight="46.0" prefWidth="212.0" text="Announcements" textFill="#010101">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="LogoutButton"  layoutX="462.0" layoutY="333.0" mnemonicParsing="false"
+              onAction="#handleLogout" prefHeight="38.0" prefWidth="119.0" text="LogOut" textFill="#99ff99">
+         <font>
+            <Font name="Microsoft JhengHei" size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

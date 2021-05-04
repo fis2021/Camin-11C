@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.window;
 
@@ -12,6 +13,10 @@ import java.io.IOException;
 public class AdminHomePageController {
 
     @FXML
+    private Button aAnnouncementButton;
+    @FXML
+    private TextField announcementField;
+    @FXML
     private Button postAnnouncementButton;
     @FXML
     private Button studentsEvidenceButton;
@@ -19,6 +24,11 @@ public class AdminHomePageController {
     private Button studentPaymentEvidenceButton;
     @FXML
     private Button LogoutButton;
+
+    public void handleAnnouncementAction() throws IOException{
+        announcementField.setVisible(true);
+        postAnnouncementButton.setVisible(true);
+    }
 
     public void handleStudentsEvidenceAction() throws IOException {
         window.createWindow("studentsEvidence.fxml",studentsEvidenceButton);

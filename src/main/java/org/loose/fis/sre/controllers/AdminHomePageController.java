@@ -13,7 +13,7 @@ import java.io.IOException;
 public class AdminHomePageController {
 
     @FXML
-    private Button aAnnouncementButton;
+    private Button announcementButton;
     @FXML
     private TextField announcementField;
     @FXML

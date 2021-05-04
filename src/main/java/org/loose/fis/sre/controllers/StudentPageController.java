@@ -21,6 +21,6 @@ public class StudentPageController {
     }
 
     public void handleLaundryScheduleAction() throws IOException {
-        window.createWindow("roomProfile.fxml",roomProfileButton);
+        window.createWindow("roomProfile.fxml",laundryScheduleButton);
     }
 }

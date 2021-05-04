@@ -28,6 +28,9 @@ public class LoginController {
     private ChoiceBox role;
     @FXML
     private Button loginButton;
+    @FXML
+    private Button backToRegisterButton;
+
 
     @FXML
     public void initialize() {
@@ -53,6 +56,16 @@ public class LoginController {
             System.out.println(e);
         } catch (IOException ee) {
             System.out.println(ee.getCause());
+        }
+    }
+    public void handleBackToRegisterAction() {
+        try{
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
+            Stage stage = (Stage) (backToRegisterButton.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error");
         }
     }
 }

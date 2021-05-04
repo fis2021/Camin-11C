@@ -15,6 +15,14 @@ public class StudentPageController {
     private Button roomProfileButton;
     @FXML
     private Button laundryScheduleButton;
+    @FXML
+    private Button checkPaymentsButton;
+    @FXML
+    private Button studentAnnouncementsButton;
+    @FXML
+    private Button laundryAppointmentButton; //facem form?
+    @FXML
+    private Button LogoutButton;
 
     public void handleRoomProfileAction() throws IOException {
         window.createWindow("roomProfile.fxml",roomProfileButton);
@@ -23,4 +31,29 @@ public class StudentPageController {
     public void handleLaundryScheduleAction() throws IOException {
         window.createWindow("roomProfile.fxml",laundryScheduleButton);
     }
+
+    public void handleCheckPaymentsAction()  throws IOException
+    {
+        window.createWindow("paymentsSituation.fxml",checkPaymentsButton);
+    }
+    public void handleStudentAnnouncementsAction()  throws IOException
+    {
+        window.createWindow("studentAnnouncements.fxml",studentAnnouncementsButton);
+    }
+    public void handleLogout() {
+        try{
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
+            Stage stage = (Stage) (LogoutButton.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error");
+        }
+    }
+
+
+
+
+
+
 }

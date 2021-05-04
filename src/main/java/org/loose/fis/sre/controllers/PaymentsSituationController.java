@@ -1,5 +1,4 @@
 package org.loose.fis.sre.controllers;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,8 +7,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
-public class LaundryScheduleController {
+public class PaymentsSituationController {
 
     @FXML
     private Button backToStudentHomePageButton;

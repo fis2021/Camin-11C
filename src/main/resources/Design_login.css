@@ -3,6 +3,6 @@
     -fx-background-color: #4B0082;
     -fx-border-color: white;
     -fx-border-width: 6px 6px 6px 6px;
-    -fx-border-style: dotted;
+    -fx-border-style: line;
 }
 

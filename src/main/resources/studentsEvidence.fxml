@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentsEvidenceController">
+   <children>
+      <Button fx:id="backToAdminHomePageButton" layoutX="411.0" layoutY="14.0" mnemonicParsing="false"
+              onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="174.0" text="Back to Admin HomePage" />
+   </children>
+</AnchorPane>

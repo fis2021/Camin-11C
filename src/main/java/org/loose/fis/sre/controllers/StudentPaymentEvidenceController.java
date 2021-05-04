@@ -9,15 +9,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LaundryScheduleController {
+public class StudentPaymentEvidenceController {
 
     @FXML
-    private Button backToStudentHomePageButton;
+    private Button backToAdminHomePageButton;
 
-    public void handleBackToStudentHomePageAction() {
+    public void handleBackToAdminHomePageAction() {
         try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("studentPage.fxml"));
-            Stage stage = (Stage) (backToStudentHomePageButton.getScene().getWindow());
+            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("adminPage.fxml"));
+            Stage stage = (Stage) (backToAdminHomePageButton.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {

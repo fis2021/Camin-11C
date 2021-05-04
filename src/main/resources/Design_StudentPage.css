@@ -1,0 +1,13 @@
+.root
+{
+    -fx-background-color: #4B0082;
+    -fx-border-color: #99FF99;
+    -fx-border-width: 6px 6px 6px 6px;
+    -fx-border-style: line;
+}
+
+.button
+{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-background-color: #CC99FF;
+}

@@ -35,8 +35,8 @@ public class StudentsEvidenceController implements Initializable {
     private Button backToAdminHomePageButton;
 
     public void handleBackToAdminHomePageAction() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("adminPage.fxml"));
+        try {
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPage.fxml"));
             Stage stage = (Stage) (backToAdminHomePageButton.getScene().getWindow());
             stage.setScene(new Scene(root));
             stage.show();
@@ -52,11 +52,12 @@ public class StudentsEvidenceController implements Initializable {
         ArrayList<Room> rooms = RoomService.getRooms();
         ArrayList<Evidence> evidenceList = new ArrayList<>();
 
-        for(User user: UserService.getUserRepository().find()){
-            for(Room room: RoomService.getRoomRepository().find()){
-                if(user.getUsername().equals(room.getStudent1()) ||
-                        user.getUsername().equals(room.getStudent1())){
-                    evidenceList.add(new Evidence(user.getUsername(),room.getNrRoom()));
+        for (User user : UserService.getUserRepository().find()) {
+            for (Room room : RoomService.getRoomRepository().find()) {
+                if (user.getUsername().equals(room.getStudent1()) ||
+                        user.getUsername().equals(room.getStudent2())) {
+                    evidenceList.add(new Evidence(user.getUsername(), room.getNrRoom()));
+
                 }
             }
         }

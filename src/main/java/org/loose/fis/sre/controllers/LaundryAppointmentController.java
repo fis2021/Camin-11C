@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.loose.fis.sre.services.LaundryService;
 
 import java.io.IOException;
 
@@ -32,6 +33,8 @@ public class LaundryAppointmentController {
 
     @FXML
     public void handleLaundryAppointmentAction(){
-
+        LaundryService.addLaundry(Integer.parseInt(roomField.getText()),
+                dayField.getText(),
+                Integer.parseInt(hourField.getText()));
     }
 }

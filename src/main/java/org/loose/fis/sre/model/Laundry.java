@@ -1,6 +1,9 @@
 package org.loose.fis.sre.model;
 
+import org.dizitart.no2.objects.Id;
+
 public class Laundry {
+    @Id
     private int nrRoom;
     private String day;
     private int hour;
@@ -12,4 +15,15 @@ public class Laundry {
     }
     public Laundry(){}
 
+    public int getNrRoom() {
+        return nrRoom;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public int getHour() {
+        return hour;
+    }
 }

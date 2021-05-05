@@ -26,16 +26,6 @@ public class UserService {
         userRepository.insert(new User(username, encodePassword(username, password), role));
     }
 
-    public static boolean checkForAccount(String username, String password) {
-        for (User user : UserService.getUserRepository().find()) {
-
-            if (Objects.equals(user.getUsername(), username)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public static boolean isLoginCorrect(String username,String password,String role){
         for (User user: userRepository.find()){
             if(username.equals(user.getUsername()) &&

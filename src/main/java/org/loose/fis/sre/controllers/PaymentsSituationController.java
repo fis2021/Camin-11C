@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import org.loose.fis.sre.model.Laundry;
 import org.loose.fis.sre.model.Room;
 import org.loose.fis.sre.model.User;
+import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.LaundryService;
 import org.loose.fis.sre.services.RoomService;
 import org.loose.fis.sre.services.UserService;
@@ -34,13 +35,6 @@ public class PaymentsSituationController{
     private Button backToStudentHomePageButton;
 
     public void handleBackToStudentHomePageAction() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("studentPage.fxml"));
-            Stage stage = (Stage) (backToStudentHomePageButton.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
+        window.goBackWindow("studentPage.fxml",backToStudentHomePageButton);
     }
 }

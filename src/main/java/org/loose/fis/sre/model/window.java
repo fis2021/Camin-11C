@@ -16,4 +16,14 @@ public class window {
         stage.setScene(new Scene(root));
         stage.show();
     }
+    public static void goBackWindow(String fxmlName,Button button){
+        try{
+            Parent root= FXMLLoader.load(window.class.getClassLoader().getResource(fxmlName));
+            Stage stage = (Stage) (button.getScene().getWindow());
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error");
+        }
+    }
 }

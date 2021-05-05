@@ -35,14 +35,7 @@ public class StudentsEvidenceController implements Initializable {
     private Button backToAdminHomePageButton;
 
     public void handleBackToAdminHomePageAction() {
-        try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("adminPage.fxml"));
-            Stage stage = (Stage) (backToAdminHomePageButton.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
+        window.goBackWindow("adminPage.fxml",backToAdminHomePageButton);
     }
 
 

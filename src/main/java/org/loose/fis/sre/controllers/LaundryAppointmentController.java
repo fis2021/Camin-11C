@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.LaundryService;
 
 import java.io.IOException;
@@ -21,14 +22,7 @@ public class LaundryAppointmentController {
     @FXML
     private Button backToStudentHomePageButton;
     public void handleBackToStudentHomePageAction() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("studentPage.fxml"));
-            Stage stage = (Stage) (backToStudentHomePageButton.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
+        window.goBackWindow("studentPage.fxml",backToStudentHomePageButton);
     }
 
     @FXML

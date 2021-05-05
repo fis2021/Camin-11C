@@ -23,7 +23,7 @@ public class StudentPageController {
     @FXML
     private Button studentAnnouncementsButton;
     @FXML
-    private Button laundryAppointmentButton; //facem form?
+    private Button laundryAppointmentButton;
     @FXML
     private Button LogoutButton;
 
@@ -42,6 +42,10 @@ public class StudentPageController {
     public void handleStudentAnnouncementsAction() throws IOException {
         window.createWindow("studentAnnouncements.fxml", studentAnnouncementsButton);
     }
+    public void handleLaundryAppointmentAction() throws IOException {
+        window.createWindow("laundryAppointment.fxml",laundryAppointmentButton);
+    }
+
 
     public void handleLogout() {
         try {

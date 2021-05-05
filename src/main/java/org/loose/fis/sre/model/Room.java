@@ -10,9 +10,9 @@ public class Room {
     @Id
     private int nrRoom;
     private int floor;
-    private User student1;
-    private User student2;
-    public Room(int nrRoom, int floor, User student1, User student2) {
+    private String student1;
+    private String student2;
+    public Room(int nrRoom, int floor, String student1, String student2) {
         this.nrRoom = nrRoom;
         this.floor = floor;
         this.student1 = student1;
@@ -30,11 +30,11 @@ public class Room {
         return floor;
     }
 
-    public User getStudent1() {
+    public String getStudent1() {
         return student1;
     }
 
-    public User getStudent2() {
+    public String getStudent2() {
         return student2;
     }
 }

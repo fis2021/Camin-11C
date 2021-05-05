@@ -2,8 +2,10 @@ package org.loose.fis.sre.services;
 
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.sre.model.Announcement;
 import org.loose.fis.sre.model.Room;
-import org.loose.fis.sre.model.User;
+
+import java.util.ArrayList;
 
 public class RoomService {
     private static ObjectRepository<Room> roomRepository;
@@ -16,8 +18,16 @@ public class RoomService {
         roomRepository = database.getRepository(Room.class);
     }
 
-    public static void addRoom(int nrRoom, int floor, User student1, User student2){
+    public static void addRoom(int nrRoom, int floor, String student1, String student2){
         roomRepository.insert(new Room(nrRoom,floor,student1,student2));
+    }
+
+    public static ArrayList<Room> getRooms(){
+        ArrayList<Room> rooms = new ArrayList<>();
+        for (Room room: RoomService.getRoomRepository().find()) {
+            rooms.add(room);
+        }
+        return rooms;
     }
 
     public static ObjectRepository<Room> getRoomRepository() {

@@ -43,7 +43,9 @@ public class LoginController {
     public void handleLoginAction() throws IncorrectLoginException {
         try {
 
-            if (UserService.checkForAccount(usernameField.getText(),passwordField.getText()) == true) {
+            if (UserService.isLoginCorrect(usernameField.getText(),
+                    passwordField.getText(),
+                    role.getValue().toString()) == true) {
                 if(role.getValue() == "Student") {
                     window.createWindow("studentPage.fxml",loginButton);
                 } else {

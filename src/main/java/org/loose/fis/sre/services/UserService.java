@@ -36,6 +36,17 @@ public class UserService {
         return false;
     }
 
+    public static boolean isLoginCorrect(String username,String password,String role){
+        for (User user: userRepository.find()){
+            if(username.equals(user.getUsername()) &&
+                    encodePassword(username,password).equals(user.getPassword()) &&
+                    role.equals(user.getRole())){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));

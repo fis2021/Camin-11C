@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentsEvidenceController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentsEvidenceController">
    <children>
-      <Button fx:id="backToAdminHomePageButton" layoutX="411.0" layoutY="14.0" mnemonicParsing="false"
-              onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="174.0" text="Back to Admin HomePage" />
+      <Button fx:id="backToAdminHomePageButton" layoutX="411.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="174.0" text="Back to Admin HomePage" />
+      <TableView fx:id="evidenceTable" layoutY="67.0" prefHeight="333.0" prefWidth="601.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="301.0" text="Name" />
+          <TableColumn fx:id="roomCol" prefWidth="299.0" text="Room" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LaundryAppointmentController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LaundryAppointmentController">
     <children>
         <Text layoutX="78.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="41.177734375" />
         <Text layoutX="78.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day:" />

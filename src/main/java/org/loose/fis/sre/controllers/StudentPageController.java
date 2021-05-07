@@ -32,7 +32,7 @@ public class StudentPageController {
     }
 
     public void handleLaundryScheduleAction() throws IOException {
-        window.createWindow("roomProfile.fxml", laundryScheduleButton);
+        window.createWindow("laundrySchedule.fxml", laundryScheduleButton);
     }
 
     public void handleCheckPaymentsAction() throws IOException {

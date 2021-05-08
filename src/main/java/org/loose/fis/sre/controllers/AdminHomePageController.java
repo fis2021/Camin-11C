@@ -25,6 +25,8 @@ public class AdminHomePageController {
     @FXML
     private Button studentPaymentEvidenceButton;
     @FXML
+    private Button addPaymentDetailsButton;
+    @FXML
     private Button LogoutButton;
 
     public void handleAnnouncementAction() throws IOException{
@@ -45,6 +47,9 @@ public class AdminHomePageController {
 
     public void handleAddRoomButton() throws IOException {
         window.createWindow("addRoom.fxml",addRoomButton);
+    }
+    public void handleAddPaymentDetailsButton() throws IOException {
+        window.createWindow("addPaymentDetails.fxml",addPaymentDetailsButton);
     }
 
     public void handleLogout() {

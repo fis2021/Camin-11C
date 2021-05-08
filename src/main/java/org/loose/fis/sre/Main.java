@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.Room;
 import org.loose.fis.sre.services.*;
 
 import java.nio.file.Files;
@@ -15,9 +16,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         initDirectory();
+        AnnouncementService.initDatabase();
         UserService.initDatabase();
+        RoomService.initDatabase();
+        LaundryService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
-        primaryStage.setTitle("Registration Example");
+        primaryStage.setTitle("Camin 11C");
         primaryStage.setScene(new Scene(root, 400, 475));
         primaryStage.show();
     }

@@ -7,13 +7,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.window;
+import org.loose.fis.sre.services.AnnouncementService;
 
 import java.io.IOException;
 
 public class AdminHomePageController {
-
     @FXML
-    private Button aAnnouncementButton;
+    private Button addRoomButton;
+    @FXML
+    private Button announcementButton;
     @FXML
     private TextField announcementField;
     @FXML
@@ -26,8 +28,12 @@ public class AdminHomePageController {
     private Button LogoutButton;
 
     public void handleAnnouncementAction() throws IOException{
-        announcementField.setVisible(true);
-        postAnnouncementButton.setVisible(true);
+        announcementField.setVisible(!announcementField.isVisible());
+        postAnnouncementButton.setVisible(!postAnnouncementButton.isVisible());
+    }
+
+    public void handlePostAnnouncementAction() throws IOException{
+        AnnouncementService.addAnnouncement(announcementField.getText());
     }
 
     public void handleStudentsEvidenceAction() throws IOException {
@@ -35,6 +41,10 @@ public class AdminHomePageController {
     }
     public void handlePaymentEvidenceAction() throws IOException {
         window.createWindow("studentPaymentEvidence.fxml",studentPaymentEvidenceButton);
+    }
+
+    public void handleAddRoomButton() throws IOException {
+        window.createWindow("addRoom.fxml",addRoomButton);
     }
 
     public void handleLogout() {

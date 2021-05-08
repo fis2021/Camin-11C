@@ -48,13 +48,6 @@ public class AdminHomePageController {
     }
 
     public void handleLogout() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
-            Stage stage = (Stage) (LogoutButton.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
+        window.goBackWindow("login.fxml",LogoutButton);
     }
 }

@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.loose.fis.sre.model.Announcement;
 import org.loose.fis.sre.model.Room;
+import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.AnnouncementService;
 import org.loose.fis.sre.services.RoomService;
 import org.loose.fis.sre.services.UserService;
@@ -23,12 +24,19 @@ public class AddRoomController {
     private TextField student2;
     @FXML
     private Button addRoomButton;
+    @FXML
+    private Button goBackButton;
 
     @FXML
     public void handleAddRoomAction() {
         RoomService.addRoom(Integer.parseInt(roomField.getText()),
                 Integer.parseInt(floorField.getText()),
                 student1.getText(), student2.getText());
-        System.out.println("room added");
+        window.goBackWindow("studentPage.fxml",addRoomButton);
+
+    }
+    @FXML
+    public void handleGoBackAction(){
+        window.goBackWindow("adminPage.fxml",goBackButton);
     }
 }

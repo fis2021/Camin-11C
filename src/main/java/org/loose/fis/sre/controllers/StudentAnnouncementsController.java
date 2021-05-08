@@ -9,6 +9,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.Announcement;
+import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.AnnouncementService;
 
 import java.io.IOException;
@@ -30,13 +31,6 @@ public class StudentAnnouncementsController {
     }
 
     public void handleBackToStudentHomePageAction() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("studentPage.fxml"));
-            Stage stage = (Stage) (backToStudentHomePageButton.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
+        window.goBackWindow("studentPage.fxml",backToStudentHomePageButton);
     }
 }

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_StudentPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentPageController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_StudentPage.css" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentPageController">
    <children>
       <Button fx:id="roomProfileButton" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleRoomProfileAction" prefHeight="46.0" prefWidth="212.0" text="Room Profile" textFill="#010101">
          <font>
@@ -19,7 +19,9 @@
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="laundryAppointmentButton" layoutX="341.0" layoutY="130.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="212.0" text="Make a laundry appointment" textFill="#010101">
+      <Button fx:id="laundryAppointmentButton" layoutX="341.0" layoutY="130.0" mnemonicParsing="false"
+              prefHeight="46.0" prefWidth="212.0"
+              onAction="#handleLaundryAppointmentAction" text="Make a laundry appointment" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>

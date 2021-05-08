@@ -15,7 +15,7 @@ import java.util.Objects;
 public class UserService {
 
     private static ObjectRepository<User> userRepository;
-
+    private static String loggedUser;
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
                 .filePath(FileSystemService.getPathToFile("registration-example.db").toFile())
@@ -33,6 +33,7 @@ public class UserService {
             if(username.equals(user.getUsername()) &&
                     encodePassword(username,password).equals(user.getPassword()) &&
                     role.equals(user.getRole())){
+                loggedUser = user.getUsername();
                 return true;
             }
         }
@@ -69,5 +70,9 @@ public class UserService {
 
     public static ObjectRepository<User> getUserRepository() {
         return userRepository;
+    }
+
+    public static String getLoggedUser() {
+        return loggedUser;
     }
 }

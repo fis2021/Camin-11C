@@ -5,26 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<<<<<<< Updated upstream
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddRoomController">
-   <children>
-      <Text layoutX="70.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number" />
-      <Text layoutX="72.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Floor" />
-      <Text layoutX="70.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student 1" />
-      <Text layoutX="72.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student2" />
-      <TextField fx:id="roomField" layoutX="172.0" layoutY="65.0" promptText="number" />
-      <TextField fx:id="floorField" layoutX="172.0" layoutY="117.0" promptText="floor" />
-      <TextField fx:id="student1" layoutX="172.0" layoutY="160.0" promptText="student1" />
-      <TextField fx:id="student2" layoutX="172.0" layoutY="196.0" promptText="student2" />
-      <Button fx:id="addRoomButton" layoutX="125.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleAddRoomAction" prefHeight="30.0" prefWidth="117.0" text="Add Room">
-         <font>
-            <Font name="Calibri Bold Italic" size="14.0" />
-         </font>
-      </Button>
-      <Button onAction="#handleGoBackAction" layoutX="272.0" layoutY="257.0" mnemonicParsing="false"
-              prefHeight="30.0" prefWidth="117.0" text="Go Back"
-               fx:id="goBackButton">
-=======
+
 <AnchorPane prefHeight="328.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddRoomController">
    <children>
       <ImageView fitHeight="335.0" fitWidth="498.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" scaleZ="0.0">
@@ -52,7 +33,7 @@
       <TextField fx:id="student1" layoutX="4.0" layoutY="171.0" prefHeight="26.0" prefWidth="124.0" promptText="student1" stylesheets="@Design_AddRoom.css" />
       <TextField fx:id="student2" layoutX="4.0" layoutY="226.0" prefHeight="26.0" prefWidth="124.0" promptText="student2" stylesheets="@Design_AddRoom.css" />
       <Button fx:id="addRoomButton" layoutX="4.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleAddRoomAction" prefHeight="30.0" prefWidth="130.0" stylesheets="@Design_AddRoom.css" text="Add Room">
->>>>>>> Stashed changes
+
          <font>
             <Font name="Calibri Bold Italic" size="14.0" />
          </font>

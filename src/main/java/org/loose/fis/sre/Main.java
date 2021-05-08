@@ -20,6 +20,7 @@ public class Main extends Application {
         UserService.initDatabase();
         RoomService.initDatabase();
         LaundryService.initDatabase();
+        PaymentDetailsService.initDatabase();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
         primaryStage.setTitle("Camin 11C");
         primaryStage.setScene(new Scene(root, 400, 475));

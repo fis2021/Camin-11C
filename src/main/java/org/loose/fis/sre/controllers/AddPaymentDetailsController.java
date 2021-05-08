@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.PaymentDetailsService;
 import org.loose.fis.sre.services.RoomService;
 
@@ -17,7 +18,8 @@ public class AddPaymentDetailsController {
     @FXML
     private ChoiceBox<String> paymentStatus;
     @FXML
-    private Button AddPaymentDetailsButton;
+    private Button goBackButton;
+
 
     @FXML
     public void initialize() {
@@ -34,6 +36,10 @@ public class AddPaymentDetailsController {
                                                 rentType.getValue(),
                                                 month.getValue(),
                                                 paymentStatus.getValue());
+    }
+    @FXML
+    public void handleGoBackAction(){
+        window.goBackWindow("adminPage.fxml",goBackButton);
     }
 
 }

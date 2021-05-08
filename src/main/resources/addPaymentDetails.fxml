@@ -16,5 +16,11 @@
       <Text layoutX="250.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTH" wrappingWidth="59.13671875000006" />
       <Text layoutX="451.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS" wrappingWidth="47.13671875" />
       <Text layoutX="39.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Name:" wrappingWidth="100.13671875" />
+      <Button fx:id="goBackButton" layoutX="520.0" layoutY="10.0"
+              onAction="#handleGoBackAction" mnemonicParsing="false" text="GoBack">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

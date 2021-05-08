@@ -32,7 +32,7 @@ public class AddRoomController {
         RoomService.addRoom(Integer.parseInt(roomField.getText()),
                 Integer.parseInt(floorField.getText()),
                 student1.getText(), student2.getText());
-        window.goBackWindow("studentPage.fxml",addRoomButton);
+
 
     }
     @FXML

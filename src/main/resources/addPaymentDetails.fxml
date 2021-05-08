@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddPaymentDetailsController">
+   <children>
+      <ChoiceBox fx:id="month" layoutX="195.0" layoutY="150.0" prefWidth="150.0" />
+
+      <TextField fx:id="studentNameField" layoutX="131.0" layoutY="46.0" />
+      <ChoiceBox fx:id="rentType" layoutX="14.0" layoutY="150.0" prefWidth="150.0" />
+      <Button fx:id="AddPaymentDetailsButton" layoutX="457.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleAddPaymentDetailsAction" text="Submit Details" />
+      <ChoiceBox fx:id="paymentStatus" layoutX="400.0" layoutY="150.0" prefWidth="150.0" />
+      <Text layoutX="67.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FEE" wrappingWidth="59.13671875" />
+      <Text layoutX="250.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTH" wrappingWidth="59.13671875000006" />
+      <Text layoutX="451.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS" wrappingWidth="47.13671875" />
+      <Text layoutX="39.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Name:" wrappingWidth="100.13671875" />
+   </children>
+</AnchorPane>

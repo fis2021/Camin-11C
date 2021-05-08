@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <AnchorPane prefHeight="328.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddRoomController">
    <children>
       <ImageView fitHeight="335.0" fitWidth="498.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" scaleZ="0.0">
@@ -36,6 +35,12 @@
 
          <font>
             <Font name="Calibri Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="goBackButton" layoutX="418.0" layoutY="14.0" mnemonicParsing="false"
+              onAction="#handleGoBackAction" prefHeight="26.0" prefWidth="65.0" stylesheets="@Design_AddRoom.css" text="GoBack">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
          </font>
       </Button>
 

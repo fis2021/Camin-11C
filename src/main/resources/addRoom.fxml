@@ -6,9 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.loose.fis.sre.controllers.AddRoomController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddRoomController">
    <children>
       <Text layoutX="70.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number" />
       <Text layoutX="72.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Floor" />
@@ -18,8 +16,14 @@
       <TextField fx:id="floorField" layoutX="172.0" layoutY="117.0" promptText="floor" />
       <TextField fx:id="student1" layoutX="172.0" layoutY="160.0" promptText="student1" />
       <TextField fx:id="student2" layoutX="172.0" layoutY="196.0" promptText="student2" />
-      <Button fx:id="addRoomButton" onAction="#handleAddRoomAction" layoutX="196.0" layoutY="257.0"
-              mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" text="Add Room">
+      <Button fx:id="addRoomButton" layoutX="125.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleAddRoomAction" prefHeight="30.0" prefWidth="117.0" text="Add Room">
+         <font>
+            <Font name="Calibri Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button onAction="#handleGoBackAction" layoutX="272.0" layoutY="257.0" mnemonicParsing="false"
+              prefHeight="30.0" prefWidth="117.0" text="Go Back"
+               fx:id="goBackButton">
          <font>
             <Font name="Calibri Bold Italic" size="14.0" />
          </font>

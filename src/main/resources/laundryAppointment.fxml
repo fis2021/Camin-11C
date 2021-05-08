@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LaundryAppointmentController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LaundryAppointmentController">
     <children>
-        <Text layoutX="78.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="41.177734375" />
-        <Text layoutX="78.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day:" />
-        <Text layoutX="78.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour:" wrappingWidth="41.177734375" />
-        <TextField fx:id="roomField" layoutX="144.0" layoutY="38.0" promptText="room" />
-        <TextField fx:id="dayField" layoutX="144.0" layoutY="78.0" promptText="day of the week" />
-        <TextField fx:id="hourField" layoutX="146.0" layoutY="124.0" promptText="hour of the appointment" />
-        <Button layoutX="151.0" layoutY="177.0" mnemonicParsing="false" onAction="#handleLaundryAppointmentAction" prefHeight="41.0" prefWidth="120.0" text="Submit">
+      <ImageView fitHeight="302.0" fitWidth="600.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@washing_machine.jpg" />
+         </image>
+      </ImageView>
+        <Text fill="#ff6600" layoutX="79.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="41.177734375">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font></Text>
+        <Text fill="#ff6600" layoutX="277.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day:">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Text>
+        <Text fill="#ff6600" layoutX="466.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour:" wrappingWidth="41.177734375">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Text>
+        <TextField fx:id="roomField" layoutX="36.0" layoutY="57.0" promptText="room" stylesheets="@Design_LaundryAppointment.css" />
+        <TextField fx:id="dayField" layoutX="214.0" layoutY="56.0" prefHeight="26.0" prefWidth="149.0" promptText="day of the week" stylesheets="@Design_LaundryAppointment.css" />
+        <TextField fx:id="hourField" layoutX="401.0" layoutY="56.0" prefHeight="26.0" prefWidth="149.0" promptText="hour of the appointment" stylesheets="@Design_LaundryAppointment.css" />
+        <Button layoutX="466.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleLaundryAppointmentAction" prefHeight="41.0" prefWidth="120.0" stylesheets="@Design_LaundryAppointment.css" text="Submit" textFill="#330066">
             <font>
                 <Font name="Calibri Bold Italic" size="14.0" />
             </font>
         </Button>
-      <Button fx:id="backToStudentHomePageButton" layoutX="401.0" layoutY="14.0" mnemonicParsing="false"
-              onAction="#handleBackToStudentHomePageAction" prefHeight="26.0" prefWidth="171.0" text="Back to Student HomePage" />
+      <Button fx:id="backToStudentHomePageButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" prefHeight="27.0" prefWidth="184.0" stylesheets="@Design_LaundryAppointment.css" text="Back to Student HomePage" textFill="#330066">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
+         </font></Button>
     </children>
 </AnchorPane>

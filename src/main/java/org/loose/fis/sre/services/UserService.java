@@ -2,11 +2,13 @@ package org.loose.fis.sre.services;
 
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.sre.model.Room;
 import org.loose.fis.sre.model.User;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -55,6 +57,14 @@ public class UserService {
             throw new IllegalStateException("SHA-512 does not exist!");
         }
         return md;
+    }
+
+    public static ArrayList<User> getUsers(){
+        ArrayList<User> users = new ArrayList<>();
+        for (User user: UserService.getUserRepository().find()) {
+            users.add(user);
+        }
+        return users;
     }
 
     public static ObjectRepository<User> getUserRepository() {

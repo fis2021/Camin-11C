@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.PaymentsSituationController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.PaymentsSituationController">
    <children>
-      <Button fx:id="backToStudentHomePageButton" layoutX="402.0" layoutY="324.0" mnemonicParsing="false"
-              onAction="#handleBackToStudentHomePageAction" prefHeight="40.0" prefWidth="184.0" text="back to Student HomePage" />
+      <Button fx:id="backToStudentHomePageButton" layoutX="402.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" prefHeight="40.0" prefWidth="184.0" text="back to Student HomePage" />
+      <TableView fx:id="paymentsTable" layoutY="-1.0" prefHeight="318.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="341.0" text="Student Name" />
+          <TableColumn fx:id="roomCol" prefWidth="256.0" text="Room" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="354.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AddPaymentDetailsController">
+   <children>
+      <ImageView fitHeight="354.0" fitWidth="645.0" layoutX="-15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@money.jpg" />
+         </image>
+      </ImageView>
+      <ChoiceBox fx:id="month" layoutX="13.0" layoutY="212.0" prefWidth="150.0" stylesheets="@Design_PaymentDetails.css" />
+
+      <TextField fx:id="studentNameField" layoutX="299.0" layoutY="61.0" promptText="name" stylesheets="@Design_PaymentDetails.css" />
+      <ChoiceBox fx:id="rentType" layoutX="13.0" layoutY="63.0" prefWidth="150.0" stylesheets="@Design_PaymentDetails.css" />
+      <Button fx:id="AddPaymentDetailsButton" layoutX="443.0" layoutY="148.0" mnemonicParsing="false" onAction="#handleAddPaymentDetailsAction" prefHeight="70.0" prefWidth="132.0" stylesheets="@Design_PaymentDetails.css" text="Submit Details" textFill="#585858">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font></Button>
+      <ChoiceBox fx:id="paymentStatus" layoutX="13.0" layoutY="135.0" prefWidth="150.0" stylesheets="@Design_PaymentDetails.css" />
+      <Text layoutX="29.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FEE" wrappingWidth="59.13671875">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font></Text>
+      <Text layoutX="29.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTH" wrappingWidth="59.13671875000006">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font></Text>
+      <Text layoutX="29.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATUS" wrappingWidth="59.13671875">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font></Text>
+      <Text layoutX="198.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Name:" wrappingWidth="100.13671875">
+         <font>
+            <Font name="Cambria Bold Italic" size="14.0" />
+         </font></Text>
+      <Button fx:id="goBackButton" layoutX="4.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleGoBackAction" prefHeight="27.0" prefWidth="149.0" stylesheets="@Design_PaymentDetails.css" text="GoBack " textFill="#575757">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

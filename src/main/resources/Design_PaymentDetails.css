@@ -1,0 +1,20 @@
+.button
+{
+    -fx-background-color: #FFFF00 ;
+    -fx-background-radius:50;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.choice-box
+{
+    -fx-background-color: #66FF99;
+    -fx-mark-color: #FFFF00;
+    -fx-effect: dropshadow( three-pass-box, #006633, 2, 3 ,0, 1);
+}
+
+.text-field
+{
+    -fx-background-color: #FFFF99;
+    -fx-effect: dropshadow( three-pass-box, #FFCC33, 2, 3 ,0, 1);
+
+}

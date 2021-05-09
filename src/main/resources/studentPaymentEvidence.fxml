@@ -2,17 +2,19 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentPaymentEvidenceController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_studentPaymentSituation.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentPaymentEvidenceController">
    <children>
-      <TableView fx:id="paymentsTable" layoutY="-1.0" prefHeight="318.0" prefWidth="600.0">
+      <TableView fx:id="paymentsTable" layoutY="6.0" prefHeight="318.0" prefWidth="600.0" stylesheets="@Design_studentPaymentSituation.css">
          <columns>
             <TableColumn fx:id="nameCol" prefWidth="341.0" text="Student Name" />
             <TableColumn fx:id="feeCol" prefWidth="256.0" text="FEE" />
          </columns>
       </TableView>
-      <Button fx:id="backToAdminHomePageButton" layoutX="389.0" layoutY="22.0" mnemonicParsing="false"
-              onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="188.0" text="go back to Admin HomePage" />
+      <Button fx:id="backToAdminHomePageButton" layoutX="398.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="188.0" stylesheets="@Design_studentPaymentSituation.css" text="go back to Admin HomePage">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
+         </font></Button>
    </children>
 </AnchorPane>

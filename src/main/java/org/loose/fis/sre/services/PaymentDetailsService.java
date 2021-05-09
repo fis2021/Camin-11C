@@ -20,12 +20,17 @@ public class PaymentDetailsService {
     }
 
     public static void addPaymentDetails(String studentName, String fee, String month, String status){
+        for(PaymentDetails payment: paymentDetailsRepository.find()){
+            if(payment.getMonth().equals(month)){
+                return;
+            }
+        }
         paymentDetailsRepository.insert(new PaymentDetails(studentName,fee,month,status));
     }
 
     public static ArrayList<PaymentDetails> getPaymentDetails(){
         ArrayList<PaymentDetails> paymentDetails = new ArrayList<>();
-        for (PaymentDetails paymentDetail: PaymentDetailsService.getPaymentDetailsRepository().find()) {
+        for (PaymentDetails paymentDetail: paymentDetailsRepository.find()) {
             paymentDetails.add(paymentDetail);
         }
         return paymentDetails;

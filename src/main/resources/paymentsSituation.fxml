@@ -10,8 +10,8 @@
       <Button fx:id="backToStudentHomePageButton" layoutX="402.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" prefHeight="40.0" prefWidth="184.0" text="back to Student HomePage" />
       <TableView fx:id="paymentsTable" layoutY="-1.0" prefHeight="318.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="nameCol" prefWidth="341.0" text="Student Name" />
-          <TableColumn fx:id="roomCol" prefWidth="256.0" text="Room" />
+          <TableColumn fx:id="monthCol" prefWidth="341.0" text="Student Name" />
+          <TableColumn fx:id="statusCol" prefWidth="256.0" text="Room" />
         </columns>
       </TableView>
    </children>

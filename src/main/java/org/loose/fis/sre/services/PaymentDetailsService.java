@@ -21,7 +21,8 @@ public class PaymentDetailsService {
 
     public static void addPaymentDetails(String studentName, String fee, String month, String status){
         for(PaymentDetails payment: paymentDetailsRepository.find()){
-            if(payment.getMonth().equals(month)){
+            if(payment.getStudentName().equals(studentName) &&
+                    payment.getMonth().equals(month)){
                 return;
             }
         }

@@ -1,0 +1,33 @@
+.root
+{
+    -fx-background-color: #CCFFFF;
+    -fx-border-style:line;
+}
+
+.table-view .cell {
+    -fx-background-color: #0066FF;
+    -fx-font-family: "Cambria";
+    -fx-font-size: 16px;
+    -fx-text-fill:  white;
+    -fx-font-weight:bold;
+
+}
+.table-row-cell:selected {
+    -fx-border-color: #000066;
+    -fx-table-cell-border-color:#000066;
+    -fx-border-width: 2px 2px 2px 2px;
+}
+.table-view .column-header {
+    -fx-background-color: #66CCFF;
+    -fx-border-color: #000066;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.button
+{
+    -fx-background-radius:25;
+    -fx-background-color: #000066;
+    -fx-text-fill:white;
+}

@@ -50,6 +50,5 @@ public class PaymentsSituationController implements Initializable{
         statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
         ObservableList<PaymentDetails> observableList = FXCollections.observableArrayList(my_payments);
         paymentsTable.setItems(observableList);
-        System.out.println("Showing the laundry");
     }
 }

@@ -4,8 +4,16 @@
 }
 .label
 {
-    -fx-effect: dropshadow(gaussian, rgba(129, 165, 172, 0.5),0,0,0,1);
+    -fx-effect: dropshadow(gaussian, white,3,2,0,2);
+    -fx-text-fill:#4B0082;
+
 }
 .button{
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3,2,0,2);
+    -fx-background-color:  linear-gradient(#4B0082, #CC99FF);
+
+}
+.button:hover
+{
+    -fx-background-color: linear-gradient(#4B0082, white);
 }

@@ -6,6 +6,10 @@
 }
 .button
 {
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3,2,0,2  );
     -fx-background-color: #FF9933;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#FF6600, #FFCC99);
 }

@@ -5,10 +5,10 @@
 }
 
 .table-view .cell {
-    -fx-background-color: #4B0082;
+    -fx-background-color:linear-gradient(white, #6699FF) ;
     -fx-font-family: "Cambria";
-    -fx-font-size: 16px;
-    -fx-text-fill:  white;
+    -fx-font-size: 15px;
+    -fx-text-fill:  #4B0082;
     -fx-font-weight:bold;
 
 }

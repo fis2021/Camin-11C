@@ -5,4 +5,18 @@
     -fx-border-width: 6px 6px 6px 6px;
     -fx-border-style: line;
 }
+.button{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3,2,0,2);
+    -fx-background-color: linear-gradient(#4B0082, #CC99FF);
 
+}
+.button:hover
+{
+    -fx-background-color: linear-gradient(#4B0082, white);
+}
+
+.choice-box
+{
+    -fx-mark-color:#4B0082 ;
+
+}

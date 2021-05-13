@@ -5,10 +5,10 @@
 }
 
 .table-view .cell {
-    -fx-background-color: #0066FF;
+    -fx-background-color:linear-gradient(#66CCFF, #0066FF) ;
     -fx-font-family: "Cambria";
     -fx-font-size: 16px;
-    -fx-text-fill:  white;
+    -fx-text-fill:   #000066;
     -fx-font-weight:bold;
 
 }
@@ -18,11 +18,11 @@
     -fx-border-width: 2px 2px 2px 2px;
 }
 .table-view .column-header {
-    -fx-background-color: #66CCFF;
+    -fx-background-color:linear-gradient(#66CCFF, #0066FF) ;
     -fx-border-color: #000066;
     -fx-border-width: 2px 2px 2px 2px;
-    -fx-text-fill: white;
-    -fx-font-size: 16px;
+    -fx-text-fill: #000066;
+    -fx-font-size: 15px;
 }
 
 .button
@@ -30,4 +30,5 @@
     -fx-background-radius:25;
     -fx-background-color: #000066;
     -fx-text-fill:white;
+    -fx-effect: dropshadow( three-pass-box , #0066FF , 2,2,0,2 );
 }

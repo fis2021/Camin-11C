@@ -5,17 +5,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.loose.fis.sre.model.Room;
 import org.loose.fis.sre.services.*;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        initDirectory();
         AnnouncementService.initDatabase();
         UserService.initDatabase();
         RoomService.initDatabase();
@@ -25,12 +24,6 @@ public class Main extends Application {
         primaryStage.setTitle("Camin 11C");
         primaryStage.setScene(new Scene(root, 400, 475));
         primaryStage.show();
-    }
-
-    private void initDirectory() {
-        Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
-        if (!Files.exists(applicationHomePath))
-            applicationHomePath.toFile().mkdirs();
     }
 
 

@@ -9,9 +9,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import org.loose.fis.sre.exceptions.*;
-import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.*;
 
@@ -36,7 +34,7 @@ public class RegistrationController {
     }
 
     @FXML
-    public void handleRegisterAction() {
+    public void handleRegisterAction() throws UsernameAlreadyExistsException{
         UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue());
         registrationMessage.setText("Account created successfully!");
     }

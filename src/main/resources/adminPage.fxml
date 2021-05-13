@@ -8,7 +8,13 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_AdminPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AdminHomePageController">
    <children>
-      <ImageView fitHeight="376.0" fitWidth="625.0" layoutX="18.0" layoutY="12.0" opacity="0.89" pickOnBounds="true" preserveRatio="true" scaleZ="0.0">
+      <Button fx:id="postAnnouncementButton" layoutX="121.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="172.0" text="Post" visible="false"
+              onAction="#handlePostAnnouncementAction">
+         <font>
+            <Font name="Calibri Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="376.0" fitWidth="625.0" layoutX="18.0" layoutY="12.0" opacity="0.31" pickOnBounds="true" preserveRatio="true" scaleZ="0.0">
          <image>
             <Image url="@poli_cladire.jpg" />
          </image>

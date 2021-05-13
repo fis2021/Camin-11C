@@ -2,9 +2,7 @@ package org.loose.fis.sre.services;
 
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
-import org.loose.fis.sre.model.Announcement;
 import org.loose.fis.sre.model.PaymentDetails;
-import org.loose.fis.sre.model.Room;
 
 import java.util.ArrayList;
 

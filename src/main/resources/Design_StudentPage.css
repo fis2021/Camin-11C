@@ -1,13 +1,15 @@
 .root
 {
     -fx-background-color: #4B0082;
-    -fx-border-color: #99FF99;
-    -fx-border-width: 6px 6px 6px 6px;
-    -fx-border-style: line;
+
 }
 
 .button
 {
-    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3,2,0,2 );
     -fx-background-color: #CC99FF;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#4B0082, #CC0099);
 }

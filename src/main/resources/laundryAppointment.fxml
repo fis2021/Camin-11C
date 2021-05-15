@@ -5,24 +5,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LaundryAppointmentController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_LaundryAppointment.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LaundryAppointmentController">
     <children>
-      <ImageView fitHeight="302.0" fitWidth="600.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="295.0" fitWidth="600.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@washing_machine.jpg" />
          </image>
       </ImageView>
-        <Text fill="#ff6600" layoutX="79.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="41.177734375">
+        <Text fill="#ff6600" layoutX="79.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room:" wrappingWidth="53.177734375">
          <font>
-            <Font name="Cambria Bold Italic" size="14.0" />
+            <Font name="Cambria Bold Italic" size="17.0" />
          </font></Text>
         <Text fill="#ff6600" layoutX="277.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day:">
          <font>
-            <Font name="System Bold Italic" size="14.0" />
+            <Font name="Cambria Bold Italic" size="17.0" />
          </font></Text>
         <Text fill="#ff6600" layoutX="466.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hour:" wrappingWidth="41.177734375">
          <font>
-            <Font name="System Bold Italic" size="14.0" />
+            <Font name="Cambria Bold Italic" size="17.0" />
          </font></Text>
         <TextField fx:id="roomField" layoutX="36.0" layoutY="57.0" promptText="room" stylesheets="@Design_LaundryAppointment.css" />
         <TextField fx:id="dayField" layoutX="214.0" layoutY="56.0" prefHeight="26.0" prefWidth="149.0" promptText="day of the week" stylesheets="@Design_LaundryAppointment.css" />

@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LaundryServiceTest {
 
-
     @BeforeAll
     static void beforeAll() {
         System.out.println("Before All");

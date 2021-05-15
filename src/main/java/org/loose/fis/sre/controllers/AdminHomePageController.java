@@ -3,6 +3,7 @@ package org.loose.fis.sre.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.loose.fis.sre.exceptions.IncorrectAnnouncementAppointmentException;
 import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.AnnouncementService;
 
@@ -31,7 +32,7 @@ public class AdminHomePageController {
         postAnnouncementButton.setVisible(!postAnnouncementButton.isVisible());
     }
 
-    public void handlePostAnnouncementAction() throws IOException{
+    public void handlePostAnnouncementAction() throws IOException, IncorrectAnnouncementAppointmentException {
         AnnouncementService.addAnnouncement(announcementField.getText());
     }
 

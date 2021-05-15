@@ -12,10 +12,15 @@
             <Image url="@183597687_295092392093705_9002280731385936075_n.jpg" />
          </image>
       </ImageView>
-      <DialogPane fx:id="nrRoom" headerText="Number of the room:" layoutX="18.0" layoutY="22.0" prefHeight="72.0" prefWidth="281.0" style="-fx-background-color: #FF9933;" />
-      <DialogPane fx:id="floor" headerText="Floor:" layoutX="15.0" layoutY="102.0" prefHeight="72.0" prefWidth="288.0" style="-fx-background-color: #FF9933;" />
-      <DialogPane fx:id="roommate" headerText="Your roommate is:" layoutX="11.0" layoutY="196.0" prefHeight="72.0" prefWidth="296.0" style="-fx-background-color: #FF9933;" stylesheets="@Design_RoomProfile.css" />
-      <Button fx:id="backToStudentHomePageButton" layoutX="409.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" prefHeight="37.0" prefWidth="198.0" stylesheets="@Design_RoomProfile.css" text="back to Student HomePage">
+      <DialogPane fx:id="nrRoom" headerText="Number of the room:" layoutX="18.0" layoutY="22.0" prefHeight="72.0"
+                  prefWidth="281.0" style="-fx-background-color: #FF9933;" />
+      <DialogPane fx:id="floor" headerText="Floor:" layoutX="15.0" layoutY="102.0" prefHeight="72.0"
+                  prefWidth="288.0" style="-fx-background-color: #FF9933;" />
+      <DialogPane fx:id="roommate" headerText="Your roommate is:" layoutX="11.0" layoutY="196.0" prefHeight="72.0"
+                  prefWidth="296.0" style="-fx-background-color: #FF9933;" stylesheets="@Design_RoomProfile.css" />
+      <Button fx:id="backToStudentHomePageButton" id="backToStudentHomePageButton" layoutX="409.0" layoutY="331.0"
+              mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" prefHeight="37.0"
+              prefWidth="198.0" stylesheets="@Design_RoomProfile.css" text="back to Student HomePage">
          <font>
             <Font name="Cambria Bold Italic" size="13.0" />
          </font></Button>

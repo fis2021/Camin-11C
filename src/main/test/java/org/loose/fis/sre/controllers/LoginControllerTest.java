@@ -1,4 +1,4 @@
-package org.loose.fis.sre;
+package org.loose.fis.sre.controllers;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,7 +22,7 @@ import java.io.IOException;
 import static org.testfx.assertions.api.Assertions.assertThat;
 
 @ExtendWith(ApplicationExtension.class)
-public class LoginTest {
+public class LoginControllerTest {
     public static final String USERNAME = "password";
     public static final String ADMINUSERNAME = "passwordadmin";
     public static final String PASSWORD = "username";
@@ -88,5 +88,6 @@ public class LoginTest {
         robot.clickOn("#adminLogoutButton");
 
         robot.clickOn("#backToRegisterButton");
+        assertThat(robot.lookup("#backToRegisterButton")).isNotNull();
     }
 }

@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import org.loose.fis.sre.exceptions.IncorrectDetailsException;
 import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.PaymentDetailsService;
 
@@ -30,7 +31,7 @@ public class AddPaymentDetailsController {
     }
 
     @FXML
-    public void handleAddPaymentDetailsAction() {
+    public void handleAddPaymentDetailsAction() throws IncorrectDetailsException {
 
         PaymentDetailsService.addPaymentDetails(studentNameField.getText(),
                                                 rentType.getValue(),

@@ -50,9 +50,11 @@
          <font>
             <Font name="Cambria Bold" size="18.0" />
          </font></Button>
-      <Text id="loginMessage" fx:id="loginMessage" fill="RED" fontSmoothingType="LCD" layoutX="362.0" layoutY="190.0" strikethrough="true" wrappingWidth="194.00000286102295" GridPane.columnIndex="3" GridPane.rowIndex="8">
+      <Text id="loginMessage" fx:id="loginMessage" fontSmoothingType="LCD"
+            fill="#ffffff" wrappingWidth="174.00000286102295"
+            layoutX="362.0" layoutY="190.0" strikethrough="false" GridPane.columnIndex="3" GridPane.rowIndex="8">
          <font>
-            <Font name="Cambria" size="14.0" />
+            <Font name="Cambria Bold Italic" size="19.0" />
          </font></Text>
    </children>
 </AnchorPane>

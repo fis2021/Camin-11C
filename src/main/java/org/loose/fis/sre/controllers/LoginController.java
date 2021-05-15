@@ -6,10 +6,9 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import org.loose.fis.sre.exceptions.IncorrectLoginException;
-import org.loose.fis.sre.exceptions.UsernameDoesNotExistException;
 import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.UserService;
+import org.loose.fis.sre.exceptions.*;
 
 import java.io.IOException;
 
@@ -50,7 +49,9 @@ public class LoginController {
             } else {
                 if(UserService.checkWrongRole(usernameField.getText(),(String) role.getValue()) == false){
                     loginMessage.setText("You selected the wrong role for your user!");
-                } else{
+                } else if(!(UserService.isUsernameTaken(usernameField.getText()))){
+                    loginMessage.setText("Please enter a valid username!");
+                }else{
                     loginMessage.setText("Wrong Password!");
                 }
                 throw new IncorrectLoginException("Account does not exist");

@@ -1,4 +1,4 @@
-package org.loose.fis.sre;
+package org.loose.fis.sre.controllers;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.testfx.assertions.api.Assertions.assertThat;
 
 @ExtendWith(ApplicationExtension.class)
-class RegistrationTest {
+public class RegistrationControllerTest {
 
     public static final String USERNAME = "password";
     public static final String PASSWORD = "username";

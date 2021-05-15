@@ -18,23 +18,23 @@
       <font>
          <Font name="Cambria Bold Italic" size="19.0" />
       </font></Label>
-    <Button fx:id="loginButton" layoutX="258.0" layoutY="351.0" onAction="#handleLoginAction" prefHeight="34.0" prefWidth="139.0" text="Login" textFill="#f5f5f5" GridPane.columnIndex="1" GridPane.rowIndex="8">
+    <Button fx:id="loginButton" id="redirectLoginButton" layoutX="258.0" layoutY="351.0" onAction="#handleLoginAction" prefHeight="34.0" prefWidth="139.0" text="Login" textFill="#f5f5f5" GridPane.columnIndex="1" GridPane.rowIndex="8">
       <font>
          <Font name="Cambria Bold" size="14.0" />
       </font></Button>
 
-    <ChoiceBox fx:id="role" layoutX="157.0" layoutY="205.0" prefHeight="34.0" prefWidth="222.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+    <ChoiceBox fx:id="role" id="role" layoutX="157.0" layoutY="205.0" prefHeight="34.0" prefWidth="222.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
     </ChoiceBox>
 
-    <PasswordField fx:id="passwordField" layoutX="157.0" layoutY="156.0" prefHeight="34.0" prefWidth="222.0" promptText="password" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+    <PasswordField fx:id="passwordField" id="password" layoutX="157.0" layoutY="156.0" prefHeight="34.0" prefWidth="222.0" promptText="password" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 
-    <TextField fx:id="usernameField" layoutX="157.0" layoutY="111.0" prefHeight="33.0" prefWidth="222.0" promptText="username" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    <TextField fx:id="usernameField" id="username" layoutX="157.0" layoutY="111.0" prefHeight="33.0" prefWidth="222.0" promptText="username" GridPane.columnIndex="3" GridPane.rowIndex="1" />
 
     <Label contentDisplay="TOP" layoutX="73.0" layoutY="205.0" stylesheets="@Design_register.css" text="Role:" textFill="#ededed" GridPane.columnIndex="1" GridPane.rowIndex="4">
       <font>
          <Font name="Cambria Bold Italic" size="19.0" />
       </font></Label>
-    <Text fx:id="registrationMessage" fill="#1e1f1d" layoutX="29.0" layoutY="381.0" wrappingWidth="174.00000286102295" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+    <Text fx:id="registrationMessage" id="registrationMessage" fill="#1e1f1d" layoutX="29.0" layoutY="381.0" wrappingWidth="174.00000286102295" GridPane.columnIndex="3" GridPane.rowIndex="8" />
 
 
     <Label alignment="TOP_LEFT" layoutX="54.0" layoutY="115.0" prefHeight="26.0" prefWidth="108.0" text="Username:" textFill="#ededed" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -42,7 +42,7 @@
       <font>
          <Font name="Cambria Bold Italic" size="19.0" />
       </font></Label>
-        <Button contentDisplay="CENTER" layoutX="70.0" layoutY="268.0" onAction="#handleRegisterAction" prefHeight="55.0" prefWidth="139.0" stylesheets="@Design_register.css" text="Register" textFill="#f5f5f5">
+        <Button contentDisplay="CENTER" id="registerButton" layoutX="70.0" layoutY="268.0" onAction="#handleRegisterAction" prefHeight="55.0" prefWidth="139.0" stylesheets="@Design_register.css" text="Register" textFill="#f5f5f5">
             <font>
                 <Font name="Cambria Bold" size="16.0" />
             </font></Button>

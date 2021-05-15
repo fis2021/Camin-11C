@@ -30,11 +30,33 @@ public class UserService {
         userRepository.insert(new User(username, encodePassword(username, password), role));
     }
 
-    private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
+    public static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
         }
+    }
+
+    public static boolean isUsernameTaken(String username){
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean checkWrongRole(String username,String role) throws UsernameDoesNotExistException {
+        for(User user: userRepository.find()){
+            if(Objects.equals(username,user.getUsername())){
+                if(Objects.equals(role,user.getRole())){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        throw new UsernameDoesNotExistException(username);
     }
 
     public static boolean isLoginCorrect(String username,String password,String role){

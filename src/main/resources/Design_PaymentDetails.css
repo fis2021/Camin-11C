@@ -1,0 +1,25 @@
+.button
+{
+    -fx-background-color: #FFFF00 ;
+    -fx-background-radius:50;
+    -fx-effect: dropshadow( three-pass-box ,  #FFFF99 , 3, 2 , 0 , 1 );
+}
+
+.button:hover
+{
+    -fx-background-color: linear-gradient(#FFFF00, #66FF99);
+}
+
+.choice-box
+{
+    -fx-background-color: #66FF99;
+    -fx-mark-color: #FFFF00;
+    -fx-effect: dropshadow( three-pass-box, #006633, 2, 3 ,0, 1);
+}
+
+.text-field
+{
+    -fx-background-color: #FFFF99;
+    -fx-effect: dropshadow( three-pass-box, #FFCC33, 1, 1 ,0, 1);
+
+}

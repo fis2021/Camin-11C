@@ -1,0 +1,20 @@
+
+.root
+{
+    -fx-background-color: #FFFFCC;
+
+}
+.button
+{   -fx-background-color:linear-gradient(#66CCFF, #66CCFF) ;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) ,3,2,0,2 );
+}
+.button:hover
+{
+    -fx-background-color: #000033;
+}
+.text-field
+{
+    -fx-background-color:linear-gradient(#FFFF66, #FFFFCC) ;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+
+}

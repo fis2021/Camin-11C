@@ -9,13 +9,13 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import org.loose.fis.sre.exceptions.*;
-import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.*;
 
 import java.io.IOException;
+
+import static org.loose.fis.sre.services.UserService.checkWrongRole;
 
 public class RegistrationController {
 
@@ -36,15 +36,19 @@ public class RegistrationController {
     }
 
     @FXML
-    public void handleRegisterAction() {
-        UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue());
-        registrationMessage.setText("Account created successfully!");
+    public void handleRegisterAction() throws UsernameDoesNotExistException, UsernameAlreadyExistsException {
+        if (UserService.isUsernameTaken(usernameField.getText()) == false) {
+            UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue());
+            registrationMessage.setText("Account created successfully!");
+        } else {
+            registrationMessage.setText("Sorry the username is already taken");
+        }
     }
 
     @FXML
-    public void handleLoginAction(){
+    public void handleLoginAction() {
         try {
-            window.createWindow("login.fxml",loginButton);
+            window.createWindow("login.fxml", loginButton);
         } catch (IOException e) {
             e.printStackTrace();
         }

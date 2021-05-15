@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="328.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.loose.fis.sre.controllers.AddRoomController">
+   <children>
+      <ImageView fitHeight="335.0" fitWidth="498.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true" scaleZ="0.0">
+         <image>
+            <Image url="@camera-camin.jpg" />
+         </image></ImageView>
+      <Text fill="#33ff33" layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number">
+         <font>
+            <Font name="Cambria Bold Italic" size="16.0" />
+         </font></Text>
+      <Text fill="#33ff33" layoutX="47.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Floor">
+         <font>
+            <Font name="Cambria Bold Italic" size="16.0" />
+         </font></Text>
+      <Text fill="#33ff33" layoutX="32.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student 1">
+         <font>
+            <Font name="Cambria Bold Italic" size="16.0" />
+         </font></Text>
+      <Text fill="#33ff33" layoutX="34.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student2">
+         <font>
+            <Font name="Cambria Bold Italic" size="16.0" />
+         </font></Text>
+      <TextField fx:id="roomField" layoutX="4.0" layoutY="69.0" prefHeight="26.0" prefWidth="124.0" promptText="number" stylesheets="@Design_AddRoom.css" />
+      <TextField fx:id="floorField" layoutX="4.0" layoutY="116.0" prefHeight="26.0" prefWidth="124.0" promptText="floor" stylesheets="@Design_AddRoom.css" />
+      <TextField fx:id="student1" layoutX="4.0" layoutY="171.0" prefHeight="26.0" prefWidth="124.0" promptText="student1" stylesheets="@Design_AddRoom.css" />
+      <TextField fx:id="student2" layoutX="4.0" layoutY="226.0" prefHeight="26.0" prefWidth="124.0" promptText="student2" stylesheets="@Design_AddRoom.css" />
+      <Button fx:id="addRoomButton" layoutX="4.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleAddRoomAction" prefHeight="30.0" prefWidth="130.0" stylesheets="@Design_AddRoom.css" text="Add Room">
+
+         <font>
+            <Font name="Calibri Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="goBackButton" layoutX="418.0" layoutY="14.0" mnemonicParsing="false"
+              onAction="#handleGoBackAction" prefHeight="26.0" prefWidth="65.0" stylesheets="@Design_AddRoom.css" text="GoBack">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
+         </font>
+      </Button>
+
+   </children>
+</AnchorPane>

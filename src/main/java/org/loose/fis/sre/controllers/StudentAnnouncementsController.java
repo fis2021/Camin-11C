@@ -1,25 +1,27 @@
 package org.loose.fis.sre.controllers;
+
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.control.ListView;
+import org.loose.fis.sre.model.Announcement;
+import org.loose.fis.sre.model.window;
+import org.loose.fis.sre.services.AnnouncementService;
 
-import java.io.IOException;
+import java.util.ArrayList;
+
 public class StudentAnnouncementsController {
-
+    @FXML
+    private ListView announcementsList;
     @FXML
     private Button backToStudentHomePageButton;
 
+    public void handleShowAnnouncementsAction(){
+        announcementsList.setVisible(true);
+        ArrayList<String> announcements = AnnouncementService.getAnnouncements();
+        announcementsList.getItems().addAll(announcements);
+    }
+
     public void handleBackToStudentHomePageAction() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("studentPage.fxml"));
-            Stage stage = (Stage) (backToStudentHomePageButton.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
+        window.goBackWindow("studentPage.fxml",backToStudentHomePageButton);
     }
 }

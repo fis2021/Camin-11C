@@ -1,25 +1,23 @@
 package org.loose.fis.sre.controllers;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import org.loose.fis.sre.exceptions.IncorrectLoginException;
-import org.loose.fis.sre.model.User;
+import org.loose.fis.sre.exceptions.UsernameDoesNotExistException;
 import org.loose.fis.sre.model.window;
 import org.loose.fis.sre.services.UserService;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class LoginController {
 
+
+    @FXML
+    private Text loginMessage;
     @FXML
     private PasswordField passwordField;
     @FXML
@@ -36,36 +34,36 @@ public class LoginController {
     public void initialize() {
         role.getItems().addAll("Student", "Admin");
     }
-
-
-
+    
     @FXML
-    public void handleLoginAction() throws IncorrectLoginException {
+    public void handleLoginAction(){
         try {
 
-            if (UserService.checkForAccount(usernameField.getText(),passwordField.getText()) == true) {
+            if (UserService.isLoginCorrect(usernameField.getText(),
+                    passwordField.getText(),
+                    role.getValue().toString()) == true) {
                 if(role.getValue() == "Student") {
                     window.createWindow("studentPage.fxml",loginButton);
                 } else {
                     window.createWindow("adminPage.fxml",loginButton);
                 }
             } else {
+                if(UserService.checkWrongRole(usernameField.getText(),(String) role.getValue()) == false){
+                    loginMessage.setText("You selected the wrong role for your user!");
+                } else{
+                    loginMessage.setText("Wrong Password!");
+                }
                 throw new IncorrectLoginException("Account does not exist");
             }
         } catch (IncorrectLoginException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         } catch (IOException ee) {
-            System.out.println(ee.getCause());
+            System.out.println(ee.getMessage());
+        } catch (UsernameDoesNotExistException e) {
+            e.printStackTrace();
         }
     }
     public void handleBackToRegisterAction() {
-        try{
-            Parent root= FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
-            Stage stage = (Stage) (backToRegisterButton.getScene().getWindow());
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            System.out.println("Error");
-        }
+        window.goBackWindow("register.fxml",backToRegisterButton);
     }
 }

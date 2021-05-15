@@ -11,9 +11,10 @@ import java.util.ArrayList;
 
 public class AnnouncementService {
     private static ObjectRepository<Announcement> announcementRepository;
-
+    private static Nitrite database;
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+         database = Nitrite.builder()
                 .filePath(FileSystemService.getPathToFile("announcement.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -49,6 +50,6 @@ public class AnnouncementService {
     }
 
     public static void closeDatabase(){
-        announcementRepository.close();
+        database.close();
     }
 }

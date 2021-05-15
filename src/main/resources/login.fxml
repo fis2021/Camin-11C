@@ -42,7 +42,7 @@
             <Image url="@poli_cladire.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="backToRegisterButton" layoutX="418.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToRegisterAction" opacity="0.78" prefHeight="27.0" prefWidth="159.0" stylesheets="@Design_login.css" text="Back to Register Page" textFill="WHITE">
+      <Button fx:id="backToRegisterButton" id="backToRegisterButton" layoutX="418.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToRegisterAction" opacity="0.78" prefHeight="27.0" prefWidth="159.0" stylesheets="@Design_login.css" text="Back to Register Page" textFill="WHITE">
          <font>
             <Font name="Cambria Bold Italic" size="13.0" />
          </font></Button>

@@ -10,10 +10,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.loose.fis.sre.exceptions.IncorrectLaundryAppointmentException;
+import org.loose.fis.sre.exceptions.RoomAlreadyExistsException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.services.FileSystemService;
-import org.loose.fis.sre.services.LaundryService;
+import org.loose.fis.sre.services.PaymentDetailsService;
+import org.loose.fis.sre.services.RoomService;
 import org.loose.fis.sre.services.UserService;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
@@ -21,11 +22,13 @@ import org.testfx.framework.junit5.Start;
 
 import java.io.IOException;
 
-
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(ApplicationExtension.class)
-class LaundryAppointmentControllerTest {
+class StudentsEvidenceControllerTest {
     public static final String USERNAME = "password";
     public static final String PASSWORD = "username";
+    public static final String ADMINUSERNAME = "passwordadmin";
 
     @AfterEach
     void tearDown() {
@@ -33,14 +36,13 @@ class LaundryAppointmentControllerTest {
     }
 
     @BeforeEach
-    void setUP() throws IOException, UsernameAlreadyExistsException, IncorrectLaundryAppointmentException {
+    void setUP() throws IOException, UsernameAlreadyExistsException, RoomAlreadyExistsException {
         FileSystemService.APPLICATION_FOLDER = ".test-registration";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         UserService.initDatabase();
-        LaundryService.initDatabase();
-        UserService.addUser(USERNAME, PASSWORD, "Student");
-        LaundryService.addLaundry(130, "Monday", 12);
-        LaundryService.addLaundry(125, "Friday", 15);
+        RoomService.initDatabase();
+        UserService.addUser(ADMINUSERNAME, PASSWORD, "Admin");
+        RoomService.addRoom(121,1,ADMINUSERNAME,"Ana");
     }
 
     @Start
@@ -50,28 +52,22 @@ class LaundryAppointmentControllerTest {
         primaryStage.setScene(new Scene(root, 600, 475));
         primaryStage.show();
     }
-
     @Test
-    void testLaundryAppointmentController(FxRobot robot) {
+    void StudentEvidenceTest (FxRobot robot){
         robot.clickOn("#username");
-        robot.write(USERNAME);
+        robot.write(ADMINUSERNAME);
         robot.clickOn("#password");
         robot.write(PASSWORD);
         robot.clickOn("#role");
+        robot.type(KeyCode.DOWN);
         robot.type(KeyCode.ENTER);
         robot.clickOn("#loginButton");
 
-        robot.clickOn("#laundryAppointmentButton");
-        robot.clickOn("#roomField");
-        robot.write("111");
-        robot.clickOn("#dayField");
-        robot.write("Monday");
-        robot.clickOn("#hourField");
-        robot.write("16");
-        robot.clickOn("#SubmitButton");
-        robot.clickOn("#backToStudentHomePageButton");
-
-
+        robot.clickOn("#studentsEvidenceButton");
+        robot.clickOn("#backToAdminHomePageButton");
+        robot.clickOn("#adminLogoutButton");
+        assertThat(robot.lookup("#adminLogoutButton")).isNotNull();
 
     }
+
 }

@@ -32,7 +32,7 @@
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="laundryScheduleButton" layoutX="341.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleLaundryScheduleAction" prefHeight="46.0" prefWidth="212.0" text="Laundry Schedule" textFill="#010101">
+      <Button fx:id="laundryScheduleButton" id="laundryScheduleButton" layoutX="341.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleLaundryScheduleAction" prefHeight="46.0" prefWidth="212.0" text="Laundry Schedule" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>

@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_AdminPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AdminHomePageController">
    <children>
-      <Button fx:id="postAnnouncementButton" layoutX="121.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="172.0" text="Post" visible="false"
+      <Button fx:id="postAnnouncementButton" id="postAnnouncementButton" layoutX="121.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="172.0" text="Post" visible="false"
               onAction="#handlePostAnnouncementAction">
          <font>
             <Font name="Calibri Bold Italic" size="14.0" />
@@ -19,7 +19,7 @@
             <Image url="@poli_cladire.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="announcementField" layoutX="29.0" layoutY="175.0" prefHeight="55.0" prefWidth="355.0" promptText="Announcement" visible="false" />
+      <TextField fx:id="announcementField" id="announcementField" layoutX="29.0" layoutY="175.0" prefHeight="55.0" prefWidth="355.0" promptText="Announcement" visible="false" />
       <Accordion />
       <Button fx:id="addPaymentDetailsButton" layoutX="396.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleAddPaymentDetailsButton" prefHeight="55.0" prefWidth="172.0" text="Add Payment Details" textFill="#010101">
          <font>
@@ -41,7 +41,7 @@
             <Font name="Calibri Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="announcementButton" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleAnnouncementAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Post an announcement " textFill="#010101">
+      <Button fx:id="announcementButton" id="announcementButton" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleAnnouncementAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Post an announcement " textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
@@ -49,10 +49,6 @@
          <font>
             <Font name="Cambria Bold" size="13.0" />
          </font></Button>
-      <Button fx:id="postAnnouncementButton" layoutX="121.0" layoutY="230.0" mnemonicParsing="false" onAction="#handlePostAnnouncementAction" prefHeight="40.0" prefWidth="172.0" text="Post" visible="false">
-         <font>
-            <Font name="Calibri Bold Italic" size="14.0" />
-         </font>
-      </Button>
+
    </children>
 </AnchorPane>

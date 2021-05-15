@@ -17,12 +17,13 @@ public class LaundryAppointmentController {
     private TextField hourField;
     @FXML
     private Button backToStudentHomePageButton;
+    @FXML Button SubmitButton;
     public void handleBackToStudentHomePageAction() {
         window.goBackWindow("studentPage.fxml",backToStudentHomePageButton);
     }
 
     @FXML
-    public void handleLaundryAppointmentAction() throws IncorrectLaundryAppointmentException {
+    public void handleSubmitButtonAction() throws IncorrectLaundryAppointmentException {
         LaundryService.addLaundry(Integer.parseInt(roomField.getText()),
                 dayField.getText(),
                 Integer.parseInt(hourField.getText()));

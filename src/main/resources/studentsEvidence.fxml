@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_StudentEvidence.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.StudentsEvidenceController">
    <children>
-      <Button fx:id="backToAdminHomePageButton" layoutX="411.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="174.0" stylesheets="@Design_StudentEvidence.css" text="Back to Admin HomePage">
+      <Button fx:id="backToAdminHomePageButton" id="backToAdminHomePageButton" layoutX="411.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="174.0" stylesheets="@Design_StudentEvidence.css" text="Back to Admin HomePage">
          <font>
             <Font name="Cambria Bold Italic" size="13.0" />
          </font></Button>

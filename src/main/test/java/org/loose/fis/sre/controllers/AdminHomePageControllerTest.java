@@ -55,7 +55,7 @@ class AdminHomePageControllerTest {
     }
 
     @Test
-    void roomServiceTest(FxRobot robot){
+    void PostAnnouncementTest(FxRobot robot){
         robot.clickOn("#username");
         robot.write(ADMINUSERNAME);
         robot.clickOn("#password");

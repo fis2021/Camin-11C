@@ -52,7 +52,7 @@ class StudentPaymentEvidenceControllerTest {
         primaryStage.show();
     }
     @Test
-    void roomServiceTest (FxRobot robot){
+    void PaymentEvidenceTest (FxRobot robot){
         robot.clickOn("#username");
         robot.write(ADMINUSERNAME);
         robot.clickOn("#password");

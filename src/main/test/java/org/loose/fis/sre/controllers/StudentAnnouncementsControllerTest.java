@@ -53,7 +53,7 @@ class StudentAnnouncementsControllerTest {
     }
 
     @Test
-    void roomServiceTest(FxRobot robot){
+    void ShowAnnouncementsTest(FxRobot robot){
         robot.clickOn("#username");
         robot.write(USERNAME);
         robot.clickOn("#password");

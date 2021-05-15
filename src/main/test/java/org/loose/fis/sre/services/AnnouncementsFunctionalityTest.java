@@ -21,7 +21,7 @@ public class AnnouncementsFunctionalityTest {
     static void afterAll() {
         System.out.println("After All");
     }
-
+    
     @BeforeEach
     void setUP() throws IOException {
         FileSystemService.APPLICATION_FOLDER = ".test-registration";

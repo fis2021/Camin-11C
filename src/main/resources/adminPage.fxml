@@ -25,11 +25,11 @@
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="studentPaymentEvidenceButton" layoutX="396.0" layoutY="194.0" mnemonicParsing="false" onAction="#handlePaymentEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Payment Evidence" textFill="#010101">
+      <Button fx:id="studentPaymentEvidenceButton" id="studentPaymentEvidenceButton" layoutX="396.0" layoutY="194.0" mnemonicParsing="false" onAction="#handlePaymentEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Payment Evidence" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="studentsEvidenceButton" layoutX="396.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleStudentsEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Evidence of the students" textFill="#010101">
+      <Button fx:id="studentsEvidenceButton" id="studentsEvidenceButton" layoutX="396.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleStudentsEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Evidence of the students" textFill="#010101">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

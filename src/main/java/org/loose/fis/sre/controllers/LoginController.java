@@ -33,38 +33,37 @@ public class LoginController {
     public void initialize() {
         role.getItems().addAll("Student", "Admin");
     }
-    
+
     @FXML
-    public void handleLoginAction(){
+    public void handleLoginAction() {
         try {
 
             if (UserService.isLoginCorrect(usernameField.getText(),
                     passwordField.getText(),
                     role.getValue().toString()) == true) {
-                if(role.getValue() == "Student") {
-                    window.createWindow("studentPage.fxml",loginButton);
+                if (role.getValue() == "Student") {
+                    window.createWindow("studentPage.fxml", loginButton);
                 } else {
-                    window.createWindow("adminPage.fxml",loginButton);
+                    window.createWindow("adminPage.fxml", loginButton);
                 }
             } else {
-                if(UserService.checkWrongRole(usernameField.getText(),(String) role.getValue()) == false){
+                if (UserService.checkWrongRole(usernameField.getText(), (String) role.getValue()) == false) {
                     loginMessage.setText("You selected the wrong role for your user!");
-                } else if(!(UserService.isUsernameTaken(usernameField.getText()))){
-                    loginMessage.setText("Please enter a valid username!");
-                }else{
+                } else {
                     loginMessage.setText("Wrong Password!");
                 }
-                throw new IncorrectLoginException("Account does not exist");
             }
-        } catch (IncorrectLoginException e) {
-            System.out.println(e.getMessage());
         } catch (IOException ee) {
             System.out.println(ee.getMessage());
         } catch (UsernameDoesNotExistException e) {
+            if (!UserService.isUsernameTaken(usernameField.getText())) {
+                loginMessage.setText("Please enter a valid username!");
+            }
             e.printStackTrace();
         }
     }
+
     public void handleBackToRegisterAction() {
-        window.goBackWindow("register.fxml",backToRegisterButton);
+        window.goBackWindow("register.fxml", backToRegisterButton);
     }
 }

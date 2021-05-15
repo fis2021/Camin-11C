@@ -52,11 +52,16 @@ public class LoginControllerTest {
     @Test
     void loginTest(FxRobot robot) {
         robot.clickOn("#username");
-        robot.write(USERNAME);
+        robot.write("pass");
         robot.clickOn("#password");
         robot.write("user");
         robot.clickOn("#role");
         robot.type(KeyCode.ENTER);
+        robot.clickOn("#loginButton");
+        assertThat(robot.lookup("#loginMessage").queryText()).hasText("Please enter a valid username!");
+
+        robot.clickOn("#username");
+        robot.write("word");
         robot.clickOn("#loginButton");
         assertThat(robot.lookup("#loginMessage").queryText()).hasText("Wrong Password!");
 

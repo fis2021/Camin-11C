@@ -12,7 +12,7 @@
             <Image url="@poli_cladire.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="studentAnnouncementsButton" layoutX="35.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleStudentAnnouncementsAction" prefHeight="46.0" prefWidth="212.0" text="Announcements" textFill="#010101">
+      <Button fx:id="studentAnnouncementsButton" id="studentAnnouncementsButton" layoutX="35.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleStudentAnnouncementsAction" prefHeight="46.0" prefWidth="212.0" text="Announcements" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font>

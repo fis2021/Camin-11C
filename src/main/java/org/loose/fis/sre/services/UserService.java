@@ -48,7 +48,7 @@ public class UserService {
 
     public static boolean checkWrongRole(String username,String role) throws UsernameDoesNotExistException {
         for(User user: userRepository.find()){
-            if(Objects.equals(username,user.getUsername())){
+            if(Objects.equals(username, user.getUsername())){
                 if(Objects.equals(role,user.getRole())){
                     return true;
                 } else {

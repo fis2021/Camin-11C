@@ -45,7 +45,7 @@
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="LogoutButton" layoutX="29.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="32.0" prefWidth="142.0" stylesheets="@Design_AdminPage.css" text="LogOut" textFill="#010101">
+      <Button fx:id="LogoutButton" id="adminLogoutButton" layoutX="29.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="32.0" prefWidth="142.0" stylesheets="@Design_AdminPage.css" text="LogOut" textFill="#010101">
          <font>
             <Font name="Cambria Bold" size="13.0" />
          </font></Button>

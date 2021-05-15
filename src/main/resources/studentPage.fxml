@@ -17,11 +17,14 @@
             <Font name="Cambria Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="LogoutButton" layoutX="462.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="38.0" prefWidth="119.0" text="LogOut" textFill="#cc0066">
+      <Button fx:id="LogoutButton" id="studentLogoutButton" layoutX="462.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="38.0" prefWidth="119.0" text="LogOut" textFill="#cc0066">
          <font>
             <Font name="Cambria Bold" size="14.0" />
          </font></Button>
-      <Button fx:id="roomProfileButton" layoutX="35.0" layoutY="42.0" mnemonicParsing="false" onAction="#handleRoomProfileAction" prefHeight="46.0" prefWidth="212.0" text="Room Profile" textFill="#010101">
+      <Button fx:id="roomProfileButton" id="roomProfileButton"
+              layoutX="35.0" layoutY="42.0" mnemonicParsing="false"
+              onAction="#handleRoomProfileAction" prefHeight="46.0" prefWidth="212.0"
+              text="Room Profile" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>

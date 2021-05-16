@@ -28,7 +28,7 @@
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="checkPaymentsButton" layoutX="35.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleCheckPaymentsAction" prefHeight="46.0" prefWidth="212.0" text="Check payments" textFill="#010101">
+      <Button fx:id="checkPaymentsButton"  id="checkPaymentsButton" layoutX="35.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleCheckPaymentsAction" prefHeight="46.0" prefWidth="212.0" text="Check payments" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.loose.fis.sre.exceptions.IncorrectDetailsException;
 import org.loose.fis.sre.exceptions.IncorrectLaundryAppointmentException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.services.FileSystemService;
@@ -36,7 +37,7 @@ class PaymentsSituationControllerTest {
         }
 
         @BeforeEach
-        void setUP() throws IOException, UsernameAlreadyExistsException, IncorrectLaundryAppointmentException {
+        void setUP() throws IOException, UsernameAlreadyExistsException, IncorrectLaundryAppointmentException, IncorrectDetailsException {
             FileSystemService.APPLICATION_FOLDER = ".test-paymentSituation";
             FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
             UserService.initDatabase();

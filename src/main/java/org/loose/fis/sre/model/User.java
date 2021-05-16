@@ -1,10 +1,6 @@
 package org.loose.fis.sre.model;
 
 import org.dizitart.no2.objects.Id;
-import org.loose.fis.sre.exceptions.IncorrectLoginException;
-
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 
 public class User {
     @Id

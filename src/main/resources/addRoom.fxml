@@ -32,13 +32,13 @@
       <TextField fx:id="floorField" layoutX="4.0" layoutY="116.0" prefHeight="26.0" prefWidth="124.0" promptText="floor" stylesheets="@Design_AddRoom.css" />
       <TextField fx:id="student1" layoutX="4.0" layoutY="171.0" prefHeight="26.0" prefWidth="124.0" promptText="student1" stylesheets="@Design_AddRoom.css" />
       <TextField fx:id="student2" layoutX="4.0" layoutY="226.0" prefHeight="26.0" prefWidth="124.0" promptText="student2" stylesheets="@Design_AddRoom.css" />
-      <Button fx:id="addRoomButton" layoutX="4.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleAddRoomAction" prefHeight="30.0" prefWidth="130.0" stylesheets="@Design_AddRoom.css" text="Add Room">
+      <Button fx:id="addRoomButton" id="addRoom" layoutX="4.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleAddRoomAction" prefHeight="30.0" prefWidth="130.0" stylesheets="@Design_AddRoom.css" text="Add Room">
 
          <font>
             <Font name="Calibri Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="goBackButton" layoutX="418.0" layoutY="14.0" mnemonicParsing="false"
+      <Button fx:id="goBackButton" id="goBackButton" layoutX="418.0" layoutY="14.0" mnemonicParsing="false"
               onAction="#handleGoBackAction" prefHeight="26.0" prefWidth="65.0" stylesheets="@Design_AddRoom.css" text="GoBack">
          <font>
             <Font name="Cambria Bold Italic" size="13.0" />

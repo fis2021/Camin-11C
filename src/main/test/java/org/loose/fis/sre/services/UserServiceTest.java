@@ -82,4 +82,15 @@ class UserServiceTest {
         UserService.addUser(ADMIN, ADMIN, ADMIN);
         assertEquals(true,UserService.isLoginCorrect(ADMIN,ADMIN,ADMIN));
     }
+
+    @Test
+    @DisplayName("Verify if equals works correctly")
+    void testEqualsIsWorkingCorrectly(){
+        assertEquals(true,((new User("user","password","Student")).
+                equals(new User("user","password","Student"))));
+        assertNotEquals(true,((new User("user","password","Student")).
+                equals(new User("user12","password","Student"))));
+        assertNotEquals(true,((new User("user","password","Student")).
+                equals(new User("user","password12","Student"))));
+    }
 }

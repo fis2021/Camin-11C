@@ -1,4 +1,4 @@
-package org.openjfx.services;
+package org.loose.fis.sre.services;
 
 
 import org.apache.commons.io.FileUtils;
@@ -8,10 +8,12 @@ import org.loose.fis.sre.services.FileSystemService;
 import org.loose.fis.sre.services.UserService;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.testfx.assertions.api.Assertions.assertThat;
 import org.loose.fis.sre.exceptions.*;
+import org.testfx.api.FxToolkit;
 
 class UserServiceTest {
 
@@ -23,13 +25,13 @@ class UserServiceTest {
     }
 
     @AfterAll
-    static void afterAll() {
-        System.out.println("After All");
+    static void afterAll() throws TimeoutException {
+        FxToolkit.cleanupStages();
     }
 
     @BeforeEach
     void setUP() throws IOException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-user";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         UserService.initDatabase();
 
@@ -79,5 +81,16 @@ class UserServiceTest {
     public void testIsLoginCorrect() throws UsernameAlreadyExistsException {
         UserService.addUser(ADMIN, ADMIN, ADMIN);
         assertEquals(true,UserService.isLoginCorrect(ADMIN,ADMIN,ADMIN));
+    }
+
+    @Test
+    @DisplayName("Verify if equals works correctly")
+    void testEqualsIsWorkingCorrectly(){
+        assertEquals(true,((new User("user","password","Student")).
+                equals(new User("user","password","Student"))));
+        assertNotEquals(true,((new User("user","password","Student")).
+                equals(new User("user12","password","Student"))));
+        assertNotEquals(true,((new User("user","password","Student")).
+                equals(new User("user","password12","Student"))));
     }
 }

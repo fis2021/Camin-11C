@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.loose.fis.sre.services.AnnouncementService;
 import org.loose.fis.sre.services.FileSystemService;
 import org.loose.fis.sre.services.UserService;
 import org.testfx.api.FxRobot;
@@ -34,8 +35,9 @@ public class LoginControllerTest {
 
     @BeforeEach
     void setUP() throws IOException, UsernameAlreadyExistsException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-login";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
+        AnnouncementService.closeDatabase();
         UserService.initDatabase();
         UserService.addUser(USERNAME, PASSWORD, "Student");
         UserService.addUser(ADMINUSERNAME, PASSWORD, "Admin");

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.loose.fis.sre.services.AnnouncementService;
 import org.loose.fis.sre.services.FileSystemService;
 import org.loose.fis.sre.services.UserService;
 import org.testfx.api.FxRobot;
@@ -36,6 +37,7 @@ public class RegistrationControllerTest {
     void setUP() throws IOException {
         FileSystemService.APPLICATION_FOLDER = ".test-registration";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
+        AnnouncementService.closeDatabase();
         UserService.initDatabase();
     }
 

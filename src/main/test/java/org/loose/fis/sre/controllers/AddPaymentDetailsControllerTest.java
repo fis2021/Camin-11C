@@ -34,7 +34,7 @@ class AddPaymentDetailsControllerTest {
 
     @BeforeEach
     void setUP() throws IOException, UsernameAlreadyExistsException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-payment-details";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         UserService.initDatabase();
         PaymentDetailsService.initDatabase();

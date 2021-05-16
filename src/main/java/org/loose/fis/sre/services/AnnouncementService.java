@@ -28,11 +28,9 @@ public class AnnouncementService {
 
     public static void isAnnouncementCorrect(String announce) throws IncorrectAnnouncementAppointmentException {
         for (Announcement announcement : announcementRepository.find()) {
-            if (announce == announcement.getAnnouncement()) {
+            if (announce.equals(announcement.getAnnouncement())) {
                 throw new IncorrectAnnouncementAppointmentException("This appointment was already taken");
             }
-
-
         }
 
     }
@@ -49,7 +47,8 @@ public class AnnouncementService {
         return announcementRepository;
     }
 
-    public static void closeDatabase(){
+    public static void closeDatabase()
+    {
         database.close();
     }
 }

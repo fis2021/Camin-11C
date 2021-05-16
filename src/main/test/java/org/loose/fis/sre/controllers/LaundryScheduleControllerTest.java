@@ -11,10 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.loose.fis.sre.exceptions.*;
-import org.loose.fis.sre.services.FileSystemService;
-import org.loose.fis.sre.services.LaundryService;
-import org.loose.fis.sre.services.RoomService;
-import org.loose.fis.sre.services.UserService;
+import org.loose.fis.sre.services.*;
 import org.testfx.api.FxRobot;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
@@ -32,12 +29,14 @@ public class LaundryScheduleControllerTest {
     @AfterEach
     void tearDown() {
         UserService.closeDatabase();
+        LaundryService.closeDatabase();
     }
 
     @BeforeEach
     void setUP() throws IOException, UsernameAlreadyExistsException, IncorrectLaundryAppointmentException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-laundrySchedule";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
+        AnnouncementService.closeDatabase();
         UserService.initDatabase();
         LaundryService.initDatabase();
         UserService.addUser(USERNAME, PASSWORD, "Student");

@@ -3,29 +3,30 @@ package org.loose.fis.sre.services;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.*;
 import org.loose.fis.sre.exceptions.IncorrectAnnouncementAppointmentException;
-import org.loose.fis.sre.model.Announcement;
-import org.loose.fis.sre.model.Announcement;
+import org.testfx.api.FxToolkit;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class AnnouncementsFunctionalityTest {
+class AnnouncementsFunctionalityTest {
     @BeforeAll
     static void beforeAll() {
         System.out.println("Before All");
     }
 
     @AfterAll
-    static void afterAll() {
-        System.out.println("After All");
+    static void afterAll() throws TimeoutException {
+        FxToolkit.cleanupStages();
     }
-    
+
     @BeforeEach
     void setUP() throws IOException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-announce";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
+        AnnouncementService.closeDatabase();
         AnnouncementService.initDatabase();
 
     }

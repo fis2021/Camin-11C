@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import org.loose.fis.sre.exceptions.IncorrectAnnouncementAppointmentException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.services.AnnouncementService;
 import org.loose.fis.sre.services.FileSystemService;
@@ -32,11 +33,12 @@ class StudentAnnouncementsControllerTest {
     @AfterEach
     void tearDown() {
         UserService.closeDatabase();
+        AnnouncementService.closeDatabase();
     }
 
     @BeforeEach
-    void setUP() throws IOException, UsernameAlreadyExistsException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+    void setUP() throws IOException, UsernameAlreadyExistsException, IncorrectAnnouncementAppointmentException {
+        FileSystemService.APPLICATION_FOLDER = ".test-AnnouncementsC";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         UserService.initDatabase();
         AnnouncementService.initDatabase();

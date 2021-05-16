@@ -32,12 +32,14 @@ class StudentPaymentEvidenceControllerTest {
     @AfterEach
     void tearDown() {
         UserService.closeDatabase();
+        PaymentDetailsService.closeDatabase();
     }
 
     @BeforeEach
     void setUP() throws IOException, UsernameAlreadyExistsException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-PaymentE";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
+        AnnouncementService.closeDatabase();
         UserService.initDatabase();
         PaymentDetailsService.initDatabase();
         UserService.addUser(ADMINUSERNAME, PASSWORD, "Admin");

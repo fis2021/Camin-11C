@@ -5,8 +5,10 @@ import org.junit.jupiter.api.*;
 import org.loose.fis.sre.exceptions.IncorrectLaundryAppointmentException;
 
 import org.loose.fis.sre.model.Laundry;
+import org.testfx.api.FxToolkit;
 
 import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,13 +21,13 @@ class LaundryServiceTest {
     }
 
     @AfterAll
-    static void afterAll() {
-        System.out.println("After All");
+    static void afterAll() throws TimeoutException {
+        FxToolkit.cleanupStages();
     }
 
     @BeforeEach
     void setUP() throws IOException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-laundry";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         LaundryService.initDatabase();
 

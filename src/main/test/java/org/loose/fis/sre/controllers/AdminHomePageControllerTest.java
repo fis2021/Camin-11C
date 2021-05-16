@@ -12,10 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.loose.fis.sre.exceptions.RoomAlreadyExistsException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
-import org.loose.fis.sre.services.AnnouncementService;
-import org.loose.fis.sre.services.FileSystemService;
-import org.loose.fis.sre.services.RoomService;
-import org.loose.fis.sre.services.UserService;
+import org.loose.fis.sre.services.*;
 import org.testfx.api.FxRobot;
 import org.testfx.assertions.api.Assertions;
 import org.testfx.framework.junit5.ApplicationExtension;
@@ -34,11 +31,12 @@ class AdminHomePageControllerTest {
     @AfterEach
     void tearDown() {
         UserService.closeDatabase();
+        AnnouncementService.closeDatabase();
     }
 
     @BeforeEach
     void setUP() throws IOException, UsernameAlreadyExistsException {
-        FileSystemService.APPLICATION_FOLDER = ".test-registration";
+        FileSystemService.APPLICATION_FOLDER = ".test-adminPage";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         UserService.initDatabase();
         AnnouncementService.initDatabase();

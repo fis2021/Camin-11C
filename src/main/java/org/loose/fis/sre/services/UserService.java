@@ -2,7 +2,6 @@ package org.loose.fis.sre.services;
 
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
-import org.loose.fis.sre.model.Room;
 import org.loose.fis.sre.model.User;
 
 import java.nio.charset.StandardCharsets;
@@ -10,22 +9,54 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Objects;
-
+import org.loose.fis.sre.exceptions.*;
 
 public class UserService {
 
     private static ObjectRepository<User> userRepository;
     private static String loggedUser;
+    private static Nitrite database;
     public static void initDatabase() {
-        Nitrite database = Nitrite.builder()
+        FileSystemService.initDirectory();
+        database = Nitrite.builder()
                 .filePath(FileSystemService.getPathToFile("registration-example.db").toFile())
                 .openOrCreate("test", "test");
 
         userRepository = database.getRepository(User.class);
     }
 
-    public static void addUser(String username, String password, String role){
+    public static void addUser(String username, String password, String role) throws UsernameAlreadyExistsException {
+        checkUserDoesNotAlreadyExist(username);
         userRepository.insert(new User(username, encodePassword(username, password), role));
+    }
+
+    public static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername()))
+                throw new UsernameAlreadyExistsException(username);
+        }
+    }
+
+    public static boolean isUsernameTaken(String username){
+        for (User user : userRepository.find()) {
+            if (Objects.equals(username, user.getUsername())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean checkWrongRole(String username,String role) throws UsernameDoesNotExistException {
+        for(User user: userRepository.find()){
+            if(Objects.equals(username, user.getUsername())){
+                if(Objects.equals(role,user.getRole())){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        throw new UsernameDoesNotExistException(username);
     }
 
     public static boolean isLoginCorrect(String username,String password,String role){
@@ -74,5 +105,9 @@ public class UserService {
 
     public static String getLoggedUser() {
         return loggedUser;
+    }
+
+    public static void closeDatabase(){
+        database.close();
     }
 }

@@ -8,45 +8,47 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Design_AdminPage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.AdminHomePageController">
    <children>
-      <ImageView fitHeight="376.0" fitWidth="625.0" layoutX="18.0" layoutY="12.0" opacity="0.89" pickOnBounds="true" preserveRatio="true" scaleZ="0.0">
+      <Button fx:id="postAnnouncementButton" id="postAnnouncementButton" layoutX="121.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="172.0" text="Post" visible="false"
+              onAction="#handlePostAnnouncementAction">
+         <font>
+            <Font name="Calibri Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="376.0" fitWidth="625.0" layoutX="18.0" layoutY="12.0" opacity="0.31" pickOnBounds="true" preserveRatio="true" scaleZ="0.0">
          <image>
             <Image url="@poli_cladire.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="announcementField" layoutX="29.0" layoutY="175.0" prefHeight="55.0" prefWidth="355.0" promptText="Announcement" visible="false" />
+      <TextField fx:id="announcementField" id="announcementField" layoutX="29.0" layoutY="175.0" prefHeight="55.0" prefWidth="355.0" promptText="Announcement" visible="false" />
       <Accordion />
       <Button fx:id="addPaymentDetailsButton" layoutX="396.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleAddPaymentDetailsButton" prefHeight="55.0" prefWidth="172.0" text="Add Payment Details" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="studentPaymentEvidenceButton" layoutX="396.0" layoutY="194.0" mnemonicParsing="false" onAction="#handlePaymentEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Payment Evidence" textFill="#010101">
+      <Button fx:id="studentPaymentEvidenceButton" id="studentPaymentEvidenceButton" layoutX="396.0" layoutY="194.0" mnemonicParsing="false" onAction="#handlePaymentEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Payment Evidence" textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="studentsEvidenceButton" layoutX="396.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleStudentsEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Evidence of the students" textFill="#010101">
+      <Button fx:id="studentsEvidenceButton" id="studentsEvidenceButton" layoutX="396.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleStudentsEvidenceAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Evidence of the students" textFill="#010101">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="addRoomButton" layoutX="396.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleAddRoomButton" prefHeight="50.0" prefWidth="172.0" text="Add Room">
+      <Button fx:id="addRoomButton" id="addRoomButton" layoutX="396.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleAddRoomButton" prefHeight="50.0" prefWidth="172.0" text="Add Room">
          <font>
             <Font name="Calibri Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="announcementButton" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleAnnouncementAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Post an announcement " textFill="#010101">
+      <Button fx:id="announcementButton" id="announcementButton" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleAnnouncementAction" prefHeight="55.0" prefWidth="172.0" stylesheets="@Design_AdminPage.css" text="Post an announcement " textFill="#010101">
          <font>
             <Font name="Cambria Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="LogoutButton" layoutX="29.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="32.0" prefWidth="142.0" stylesheets="@Design_AdminPage.css" text="LogOut" textFill="#010101">
+      <Button fx:id="LogoutButton" id="adminLogoutButton" layoutX="29.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="32.0" prefWidth="142.0" stylesheets="@Design_AdminPage.css" text="LogOut" textFill="#010101">
          <font>
             <Font name="Cambria Bold" size="13.0" />
          </font></Button>
-      <Button fx:id="postAnnouncementButton" layoutX="121.0" layoutY="230.0" mnemonicParsing="false" onAction="#handlePostAnnouncementAction" prefHeight="40.0" prefWidth="172.0" text="Post" visible="false">
-         <font>
-            <Font name="Calibri Bold Italic" size="14.0" />
-         </font>
-      </Button>
+
    </children>
 </AnchorPane>

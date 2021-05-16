@@ -1,15 +1,8 @@
 package org.loose.fis.sre.controllers;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import org.loose.fis.sre.model.Announcement;
 import org.loose.fis.sre.model.window;
-import org.loose.fis.sre.services.AnnouncementService;
 
 import java.io.IOException;
 

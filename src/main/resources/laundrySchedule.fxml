@@ -16,7 +16,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-        <Button fx:id="backToStudentHomePageButton" layoutX="415.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" stylesheets="@Design_LaundrySchedule.css" text="back to Student HomePage">
+        <Button fx:id="backToStudentHomePageButton" id="backToStudentHomePageButton" layoutX="415.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" stylesheets="@Design_LaundrySchedule.css" text="back to Student HomePage">
             <font>
                 <Font name="Calibri Bold Italic" size="14.0" />
             </font>

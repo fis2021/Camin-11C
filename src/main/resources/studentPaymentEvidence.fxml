@@ -12,7 +12,7 @@
             <TableColumn fx:id="feeCol" prefWidth="256.0" text="FEE" />
          </columns>
       </TableView>
-      <Button fx:id="backToAdminHomePageButton" layoutX="398.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="188.0" stylesheets="@Design_studentPaymentSituation.css" text="go back to Admin HomePage">
+      <Button fx:id="backToAdminHomePageButton" id="backToAdminHomePageButton" layoutX="398.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleBackToAdminHomePageAction" prefHeight="36.0" prefWidth="188.0" stylesheets="@Design_studentPaymentSituation.css" text="go back to Admin HomePage">
          <font>
             <Font name="Cambria Bold Italic" size="13.0" />
          </font></Button>

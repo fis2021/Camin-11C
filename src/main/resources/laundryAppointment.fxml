@@ -24,15 +24,16 @@
          <font>
             <Font name="Cambria Bold Italic" size="17.0" />
          </font></Text>
-        <TextField fx:id="roomField" layoutX="36.0" layoutY="57.0" promptText="room" stylesheets="@Design_LaundryAppointment.css" />
-        <TextField fx:id="dayField" layoutX="214.0" layoutY="56.0" prefHeight="26.0" prefWidth="149.0" promptText="day of the week" stylesheets="@Design_LaundryAppointment.css" />
-        <TextField fx:id="hourField" layoutX="401.0" layoutY="56.0" prefHeight="26.0" prefWidth="149.0" promptText="hour of the appointment" stylesheets="@Design_LaundryAppointment.css" />
-        <Button layoutX="466.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleLaundryAppointmentAction" prefHeight="41.0" prefWidth="120.0" stylesheets="@Design_LaundryAppointment.css" text="Submit" textFill="#330066">
+        <TextField fx:id="roomField" id="roomField" layoutX="36.0" layoutY="57.0" promptText="room" stylesheets="@Design_LaundryAppointment.css" />
+        <TextField fx:id="dayField"  id="dayField" layoutX="214.0" layoutY="56.0" prefHeight="26.0" prefWidth="149.0" promptText="day of the week" stylesheets="@Design_LaundryAppointment.css" />
+        <TextField fx:id="hourField" id="hourField" layoutX="401.0" layoutY="56.0" prefHeight="26.0" prefWidth="149.0" promptText="hour of the appointment" stylesheets="@Design_LaundryAppointment.css" />
+        <Button layoutX="466.0" fx:id="SubmitButton" id="SubmitButton" layoutY="120.0" mnemonicParsing="false"
+                onAction="#handleSubmitButtonAction" prefHeight="41.0" prefWidth="120.0" stylesheets="@Design_LaundryAppointment.css" text="Submit" textFill="#330066">
             <font>
                 <Font name="Calibri Bold Italic" size="14.0" />
             </font>
         </Button>
-      <Button fx:id="backToStudentHomePageButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" prefHeight="27.0" prefWidth="184.0" stylesheets="@Design_LaundryAppointment.css" text="Back to Student HomePage" textFill="#330066">
+      <Button fx:id="backToStudentHomePageButton" id="backToStudentHomePageButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleBackToStudentHomePageAction" prefHeight="27.0" prefWidth="184.0" stylesheets="@Design_LaundryAppointment.css" text="Back to Student HomePage" textFill="#330066">
          <font>
             <Font name="Cambria Bold Italic" size="13.0" />
          </font></Button>
